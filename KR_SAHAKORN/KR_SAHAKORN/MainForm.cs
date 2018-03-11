@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json.Linq;           // MUST download JSON using NUGet package
+using System.Threading;
 
 namespace KR_SAHAKORN
 {
@@ -16,12 +17,12 @@ namespace KR_SAHAKORN
     {
         private object tempValue;
         private bool ignoreEvent = false;
-
+        private StockInForm stockInForm = null;
         public MainForm()
         {
 
             InitializeComponent();
-            this.Text = "KR SAHAKORN v.3.2 (2/22/2018)";
+            this.Text = "KR SAHAKORN v.4 (3/11/2018)";
 
             //LOGIC
             InfoManager.LoadType();
@@ -831,6 +832,7 @@ namespace KR_SAHAKORN
                 {
                     EditProductForm editProductForm = new EditProductForm(InfoManager.getItem(productName));
                     editProductForm.Text = productName;
+                    editProductForm.setStockInForm(stockInForm);
                     editProductForm.ShowDialog();
 
                     productName = editProductForm.product.name;
@@ -867,6 +869,31 @@ namespace KR_SAHAKORN
             }
 
     }
+
+        private void OpenStockInForm()
+        {
+            if(stockInForm == null)
+            {
+                //todo use datasource for stockin to help updating data
+                stockInForm = new StockInForm();
+                stockInForm.ShowDialog();
+                stockInForm = null;
+                InfoManager.stockInMode = false;
+            }
+            else
+            {
+                MessageBox.Show("กำลังจดเข้า stock", "Currently doing stock in", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void stockInButton_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(OpenStockInForm));
+            thread.Start();
+        }
+
+
+   
     }
 }
 /* References 

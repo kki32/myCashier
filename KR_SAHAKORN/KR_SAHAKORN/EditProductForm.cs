@@ -15,7 +15,8 @@ namespace KR_SAHAKORN
         public bool ignoreEvent = false;
         public Item product;
         Dictionary<string, ItemHistory> tempHistories = new Dictionary<string, ItemHistory>();
-
+        public DateTime date;
+        public StockInForm stockInForm;
      
         public EditProductForm(Item item)
         {
@@ -43,6 +44,12 @@ namespace KR_SAHAKORN
             }
   
             this.product = item;
+
+        }
+
+        public void setStockInForm(StockInForm stockInForm)
+        {
+            this.stockInForm = stockInForm;
         }
 
         private void saveEditStockButton_Click(object sender, EventArgs e)
@@ -53,6 +60,10 @@ namespace KR_SAHAKORN
                 {
                     InfoManager.setItem(product.name, itemh.after, itemh.field);
                     InfoManager.AddItemHistory(product.name, itemh);
+                    if (InfoManager.stockInMode)
+                    {
+                        stockInForm.UpdateGrid(product.name, itemh.field, itemh.before, itemh.after);
+                    }
                 }
             }
             Close();

@@ -25,7 +25,7 @@ namespace KR_SAHAKORN
         public static bool authenticateCashbook = false;
         public static bool authenticateSignbook = false;
         private static Dictionary<DateTime, Accounting> accounting = new Dictionary<DateTime, Accounting>();
-
+        private static Dictionary<DateTime, Dictionary<string, List<string>>> stockIn = new Dictionary<DateTime, Dictionary<string, List<string>>>();
         private static Dictionary<string, Item> stock = new Dictionary<string, Item>();
         private static string[] buyerNames;
         private static string[] type;
@@ -33,7 +33,7 @@ namespace KR_SAHAKORN
         public static Dictionary<string, List<Transaction>> signbook = new Dictionary<string, List<Transaction>>();
         public static Transaction currentTransaction;
         public static int currentTransactionId;
-
+        public static bool stockInMode = false;
 
         public static void LoadCurrentRefId()
         {
@@ -288,6 +288,66 @@ namespace KR_SAHAKORN
             return type;
         }
 
+        public static void LoadStockIn()
+        {
+            string json = "";
+
+            using (StreamReader r = new StreamReader("stockIn.json"))
+            {
+                json = r.ReadToEnd();
+            }
+
+            stockIn = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<DateTime, Dictionary<string, List<string>>>>(json);
+            if (stockIn == null)
+            {
+                stockIn = new Dictionary<DateTime, Dictionary<string, List<string>>> ();
+            }
+        }
+        public static void AddStockIn(DateTime date, string item, string field, string before, string after)
+        {
+            if (!stockIn.ContainsKey(date)) stockIn[date] = new Dictionary<string, List<string>>();
+            if (!stockIn[date].ContainsKey(item)) stockIn[date][item] = new List<string>() { "", "false", "false", "false"};
+
+
+            if (field.Equals("ใน stock"))
+            {
+                var difference = Convert.ToDouble(after) - Convert.ToDouble(before);
+                if (!stockIn[date][item].First().Equals(""))
+                {
+                    difference += Convert.ToDouble(stockIn[date][item].First());
+                }
+                stockIn[date][item][0] = difference.ToString();
+            }
+            else if (field.Equals("ราคาต่อชิ้น"))
+            {
+                stockIn[date][item][1] = "true";
+            } else if (field.Equals("ราคาต่อแพ็ค"))
+            {
+                stockIn[date][item][2] = "true";
+            }
+            else if (field.Equals("ราคาต้นทุน (จำนวน/แพ็ค)"))
+            {
+                stockIn[date][item][3] = "true";
+            }
+
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(stockIn);
+            System.IO.File.WriteAllText("stockIn.json", json, Encoding.Unicode);
+        }
+        public static Dictionary<string, List<string>> GetStockIn(DateTime date)
+        {
+            if (stockIn.ContainsKey(date))
+            {
+                return stockIn[date];
+            }
+            return null;
+       
+        }
+
+        public static List<string> GetStockInForSpecificItem(DateTime date, string item)
+        {
+            return stockIn[date][item];
+        }
+
 
         public static void AddItemHistory(string name, ItemHistory itemh)
         {
@@ -300,6 +360,7 @@ namespace KR_SAHAKORN
 
             System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
         }
+
         public static void setItem(string name, string newValue, string field)
         {
             Item item = stock[name];
@@ -333,7 +394,6 @@ namespace KR_SAHAKORN
             {
                 item.minInstock = Convert.ToInt32(newValue);
             }
- 
             else if (field.Equals("originalPrice") || field.Equals("ราคาต้นทุน (จำนวน/แพ็ค)"))
             {
                 item.originalPrice = newValue.ToString();

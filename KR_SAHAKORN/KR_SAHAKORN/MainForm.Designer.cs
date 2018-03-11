@@ -87,7 +87,7 @@
             this.totalLabelForStockTab = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.addProductButton = new System.Windows.Forms.Button();
-            this.editProductButton = new System.Windows.Forms.Button();
+            this.addToStockButton = new System.Windows.Forms.Button();
             this.stockGrid = new System.Windows.Forms.DataGridView();
             this.newProductGridTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -718,7 +718,7 @@
             this.stockTab.Controls.Add(this.totalLabelForStockTab);
             this.stockTab.Controls.Add(this.label6);
             this.stockTab.Controls.Add(this.addProductButton);
-            this.stockTab.Controls.Add(this.editProductButton);
+            this.stockTab.Controls.Add(this.addToStockButton);
             this.stockTab.Controls.Add(this.stockGrid);
             this.stockTab.Location = new System.Drawing.Point(4, 35);
             this.stockTab.Name = "stockTab";
@@ -782,15 +782,15 @@
             this.addProductButton.UseVisualStyleBackColor = true;
             this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
-            // editProductButton
+            // addToStockButton
             // 
-            this.editProductButton.Location = new System.Drawing.Point(607, 87);
-            this.editProductButton.Name = "editProductButton";
-            this.editProductButton.Size = new System.Drawing.Size(85, 32);
-            this.editProductButton.TabIndex = 13;
-            this.editProductButton.Text = "ที่ถูกเปลี่ยน";
-            this.editProductButton.UseVisualStyleBackColor = true;
-            this.editProductButton.Visible = false;
+            this.addToStockButton.Location = new System.Drawing.Point(607, 87);
+            this.addToStockButton.Name = "addToStockButton";
+            this.addToStockButton.Size = new System.Drawing.Size(85, 32);
+            this.addToStockButton.TabIndex = 13;
+            this.addToStockButton.Text = "จดเข้า stock";
+            this.addToStockButton.UseVisualStyleBackColor = true;
+            this.addToStockButton.Click += new System.EventHandler(this.stockInButton_Click);
             // 
             // stockGrid
             // 
@@ -1264,7 +1264,7 @@
         private System.Windows.Forms.Label totalReconciliationLabelResult;
         private System.Windows.Forms.TabPage stockTab;
         private System.Windows.Forms.DataGridView stockGrid;
-        private System.Windows.Forms.Button editProductButton;
+        private System.Windows.Forms.Button addToStockButton;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Label totalLabelForStockTab;
         private System.Windows.Forms.Label label6;
