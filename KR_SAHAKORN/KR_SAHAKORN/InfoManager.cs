@@ -222,7 +222,16 @@ namespace KR_SAHAKORN
              
                     System.IO.File.WriteAllText("log.txt", logMessage, Encoding.Unicode);
         }
-    
+
+        public static void AddDamagedProduct(string name, int quantity)
+        {
+            var item = getItem(name);
+            item.instock -= quantity;
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+        }
+
         public static void SaveCurrentTransactionToCashbook()
         {
             object book;

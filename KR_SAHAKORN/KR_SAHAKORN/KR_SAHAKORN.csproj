@@ -54,8 +54,13 @@
     <Compile Include="AddProductForm.Designer.cs">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="GlobalEnums.cs" />
+    <Compile Include="DamagedProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamagedProductForm.Designer.cs">
+      <DependentUpon>DamagedProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +108,9 @@
     <Compile Include="Type.cs" />
     <EmbeddedResource Include="AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagedProductForm.resx">
+      <DependentUpon>DamagedProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockInForm.resx">
       <DependentUpon>StockInForm.cs</DependentUpon>

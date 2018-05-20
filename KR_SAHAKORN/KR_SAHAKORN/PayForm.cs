@@ -17,6 +17,7 @@ namespace KR_SAHAKORN
         public PayForm(double totalCost)
         {
             InitializeComponent();
+            this.Text = "ชำระสินค้า";
             totalCostLabel.Text = totalCost.ToString();
             this.totalCost = totalCost;
         }

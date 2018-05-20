@@ -28,6 +28,20 @@ namespace KR_SAHAKORN
         {
             return date + " สินค้าได้ถูกสร้างขึ้น";
         }
+
+        public static string DAMAGED_ITEM(string date, string reason, string before, string after)
+        {
+            return date + " สินค้าเสียเพราะว่า " + reason + " เลยลดจำนวนใน stock จาก " + before + " ไป " + after;
+        }
+
+        public static string CODE_ERROR_TITLE(GlobalEnums.CodeError ce)
+        {
+            return "Code Error: " + ce;
+        }
+
+        public static string CODE_ERROR_MESSAGE()
+        {
+            return "ติดต่อพลอยและให้ Code Error";
+        }
     }
 }
-

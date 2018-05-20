@@ -38,6 +38,7 @@
             this.editProductHistoryRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.removeProductButton = new System.Windows.Forms.Button();
+            this.damagedProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editStockGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -189,9 +190,21 @@
             this.removeProductButton.UseVisualStyleBackColor = true;
             this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
             // 
+            // damagedProduct
+            // 
+            this.damagedProduct.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
+            this.damagedProduct.Location = new System.Drawing.Point(613, 331);
+            this.damagedProduct.Name = "damagedProduct";
+            this.damagedProduct.Size = new System.Drawing.Size(85, 32);
+            this.damagedProduct.TabIndex = 29;
+            this.damagedProduct.Text = "สินค้าเสีย";
+            this.damagedProduct.UseVisualStyleBackColor = true;
+            this.damagedProduct.Click += new System.EventHandler(this.damagedProduct_Click);
+            // 
             // EditProductForm
             // 
             this.ClientSize = new System.Drawing.Size(929, 388);
+            this.Controls.Add(this.damagedProduct);
             this.Controls.Add(this.removeProductButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.editProductHistoryRichTextBox);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
         protected System.Windows.Forms.DataGridView editStockGrid;
+        private System.Windows.Forms.Button damagedProduct;
     }
 }

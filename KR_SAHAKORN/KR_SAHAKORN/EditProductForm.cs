@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KR_SAHAKORN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +19,40 @@ namespace KR_SAHAKORN
         public DateTime date;
         public StockInForm stockInForm;
      
+
+        private void RefreshEditProductGrid()
+        {
+            editStockGrid.Rows.Clear();
+            editProductHistoryRichTextBox.Clear();
+
+            editStockGrid.Rows.Add(product.type, product.name, product.price, product.pricePerPack, product.quantityPerPack, product.instock, product.minInstock, product.originalPrice);
+            editStockGrid.Rows[0].Selected = false;
+            foreach (ItemHistory itemh in product.getAllItemHistories())
+            {
+                if (itemh.style == GlobalEnums.HistoryStyle.Edit)
+                {
+                    editProductHistoryRichTextBox.AppendText(MessageLibrary.EDIT_ITEM(itemh.date.ToString(), itemh.field, itemh.before, itemh.after));
+                }
+                else if (itemh.style == GlobalEnums.HistoryStyle.Add)
+                {
+                    editProductHistoryRichTextBox.AppendText(MessageLibrary.ADD_ITEM(itemh.date.ToString()));
+                }
+                else if (itemh.style == GlobalEnums.HistoryStyle.Damaged)
+                {
+                    editProductHistoryRichTextBox.AppendText(MessageLibrary.DAMAGED_ITEM(itemh.date.ToString(), itemh.field, itemh.before, itemh.after));
+                    editProductHistoryRichTextBox.AppendText("\n");
+                }
+                else
+                {
+                    MessageBox.Show(MessageLibrary.CODE_ERROR_MESSAGE(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE1), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         public EditProductForm(Item item)
         {
             InitializeComponent();
+            this.Text = item.name;
+            product = item;
 
             editProductCategoryColumn.Items.Clear();
             foreach (var type in InfoManager.getType())
@@ -28,22 +60,8 @@ namespace KR_SAHAKORN
                 editProductCategoryColumn.Items.Add(type);
             }
 
-            editStockGrid.Rows.Add(item.type, item.name, item.price, item.pricePerPack, item.quantityPerPack, item.instock, item.minInstock, item.originalPrice);
-            editStockGrid.Rows[0].Selected = false;
-            foreach (ItemHistory itemh in item.getAllItemHistories())
-            {
-                if(itemh.style == GlobalEnums.HistoryStyle.Edit)
-                {
-                    editProductHistoryRichTextBox.AppendText(MessageLibrary.EDIT_ITEM(itemh.date.ToString(), itemh.field, itemh.before, itemh.after));
-                }
-                else
-                {
-                    editProductHistoryRichTextBox.AppendText(MessageLibrary.ADD_ITEM(itemh.date.ToString()));
-                }
-             
-            }
-  
-            this.product = item;
+
+            RefreshEditProductGrid();
 
         }
 
@@ -160,10 +178,43 @@ namespace KR_SAHAKORN
 
             if (dialogResult.Equals(DialogResult.OK))
             {
-        
                 InfoManager.RemoveProduct(product.name);
                 Close();
             }
+        }
+
+
+        private void damagedProduct_Click(object sender, EventArgs e)
+        {
+            var valid = false;
+            if(tempHistories.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("ข้อมูลที่ใส่มาจะถูกลบถ้าคุณไม่เซฟ คุณแน่ใจนะ", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                if (dialogResult.Equals(DialogResult.OK))
+                {
+                    valid = true;
+                }
+            }
+            else
+            {
+                valid = true;
+            }
+
+            if (valid)
+            {
+                tempHistories.Clear();
+                DamagedProductForm damagedProductForm = new DamagedProductForm(product);
+                {
+                    var result = damagedProductForm.ShowDialog();
+                    if (result == DialogResult.Cancel)
+                    {
+                        RefreshEditProductGrid();
+                    }
+                }
+            }
+     
+            
         }
     }
 
