@@ -11,3 +11,4 @@ TODO:
 5 Create Graph for what reason the product is damaged
 6 Create notif for when the product is about to expire
 7 Make log more useful
+8 Make stock in more useful
