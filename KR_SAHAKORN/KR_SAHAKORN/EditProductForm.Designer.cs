@@ -22,8 +22,8 @@
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.editStockGrid = new System.Windows.Forms.DataGridView();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.saveEditStockButton = new System.Windows.Forms.Button();
@@ -32,13 +32,14 @@
             this.removeProductButton = new System.Windows.Forms.Button();
             this.damagedProduct = new System.Windows.Forms.Button();
             this.editProductCategoryColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column_8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warningText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.editStockGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -52,18 +53,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.editStockGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.editStockGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.editStockGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.editStockGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.editStockGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.editStockGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editProductCategoryColumn,
-            this.Column20,
+            this.column_2,
             this.Column22,
             this.Column30,
             this.column_5,
@@ -71,14 +72,14 @@
             this.column_7,
             this.column_8});
             this.editStockGrid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.editStockGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.editStockGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.editStockGrid.Location = new System.Drawing.Point(24, 12);
             this.editStockGrid.MultiSelect = false;
             this.editStockGrid.Name = "editStockGrid";
@@ -153,11 +154,11 @@
             this.editProductCategoryColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.editProductCategoryColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Column20
+            // column_2
             // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column20.HeaderText = "รายการสินค้า";
-            this.Column20.Name = "Column20";
+            this.column_2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.column_2.HeaderText = "รายการสินค้า";
+            this.column_2.Name = "column_2";
             // 
             // Column22
             // 
@@ -201,9 +202,20 @@
             this.column_8.HeaderText = "ราคาต้นทุน (จำนวน/แพ็ค)";
             this.column_8.Name = "column_8";
             // 
+            // warningText
+            // 
+            this.warningText.AutoSize = true;
+            this.warningText.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
+            this.warningText.ForeColor = System.Drawing.Color.DarkRed;
+            this.warningText.Location = new System.Drawing.Point(19, 300);
+            this.warningText.Name = "warningText";
+            this.warningText.Size = new System.Drawing.Size(0, 26);
+            this.warningText.TabIndex = 30;
+            // 
             // EditProductForm
             // 
             this.ClientSize = new System.Drawing.Size(929, 388);
+            this.Controls.Add(this.warningText);
             this.Controls.Add(this.damagedProduct);
             this.Controls.Add(this.removeProductButton);
             this.Controls.Add(this.label1);
@@ -226,12 +238,13 @@
         protected System.Windows.Forms.DataGridView editStockGrid;
         private System.Windows.Forms.Button damagedProduct;
         private System.Windows.Forms.DataGridViewComboBoxColumn editProductCategoryColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_5;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_6;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_7;
         private System.Windows.Forms.DataGridViewTextBoxColumn column_8;
+        private System.Windows.Forms.Label warningText;
     }
 }

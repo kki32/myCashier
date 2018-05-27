@@ -248,7 +248,7 @@ namespace KR_SAHAKORN
                 //TODO
                 if (b.item.name.Equals(GlobalEnums.COLD_WATER))
                 {
-                    stock["น้ำเปล่า เล็ก (28/2/61)"].instock -= b.quantity;
+                    stock[GlobalEnums.WATER].instock -= b.quantity;
                 }
                 else
                 {

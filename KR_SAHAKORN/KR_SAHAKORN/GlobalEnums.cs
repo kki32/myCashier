@@ -36,6 +36,7 @@ namespace KR_SAHAKORN
         public const string COLUMN_7 = "ควรมีใน stock";
         public const string COLUMN_8 = "ราคาต้นทุน (จำนวน/แพ็ค)";
         public const string COLD_WATER = "น้ำเปล่าเย็น เล็ก";
+        public const string WATER = "น้ำเปล่า เล็ก (28/2/61)";
 
 
     }
