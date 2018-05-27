@@ -3,11 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace KR_SAHAKORN
 {
     public static class MessageLibrary
     {
+
+        public static string EXPORT_ERROR()
+        {
+            return "มีปัญหาระหว่าง export\n" + CODE_ERROR_MESSAGE();
+        }
+
+        public static Message FORMAT_ERROR = new Message("Format error",
+          "Format มีปัญหา",
+          MessageBoxIcon.Error);
+
+        public static Message EXPORT_SUCCESSFUL = new Message("Successful export",
+            "Export file {0} เสร็จเรียบร้อยแล้ว",
+            MessageBoxIcon.Information);
+
         //TODO make more better logging
         public static string CHANGE_PRICE(double oldVal, double newVal)
         {

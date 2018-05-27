@@ -26,7 +26,16 @@ namespace KR_SAHAKORN
             editProductHistoryRichTextBox.Clear();
 
             editStockGrid.Rows.Add(product.type, product.name, product.price, product.pricePerPack, product.quantityPerPack, product.instock, product.minInstock, product.originalPrice);
+            if (product.name.Equals(GlobalEnums.COLD_WATER))
+            {
+                column_5.ReadOnly = true;
+                column_6.ReadOnly = true;
+                column_7.ReadOnly = true;
+                column_8.ReadOnly = true;
+            }
+
             editStockGrid.Rows[0].Selected = false;
+
             foreach (ItemHistory itemh in product.getAllItemHistories())
             {
                 if (itemh.style == GlobalEnums.HistoryStyle.Edit)
@@ -93,79 +102,90 @@ namespace KR_SAHAKORN
             {
                 string columnName = editStockGrid.Columns[e.ColumnIndex].HeaderText;
                 string oldValue = null;
-                string newValue = editStockGrid[e.ColumnIndex, e.RowIndex].Value.ToString();
-                switch (e.ColumnIndex)
+                string newValue = "";
+
+                try
                 {
-                    case 0:
-                        oldValue = product.type;
-                        break;
-                    case 1:
-                        oldValue = product.name;
-                        break;
-                    case 2:
-                        oldValue = product.price.ToString();
-                        break;
-                    case 3:
-                        oldValue = product.pricePerPack.ToString();
-                        break;
-                    case 4:
-                        oldValue = product.quantityPerPack.ToString();
-                        break;
-                    case 5:
-                        oldValue = product.instock.ToString();
-                        int number;
-                        if (!Int32.TryParse(newValue, out number))
-                        {
-                            editStockGrid[e.ColumnIndex, e.RowIndex].Value = oldValue;
-                            MessageBox.Show("format ผิดพลาด", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        break;
-                    case 6:
-                        oldValue = product.minInstock.ToString();
-                        break;
-                    case 7:
-                        oldValue = product.originalPrice.ToString();
-                        if (newValue.Contains('/')){
-                            try
-                            {
-                                string[] temp = newValue.Split('/');
-                                double pricePerPiece = Convert.ToDouble(temp[0]) / Convert.ToDouble(temp[1]);
-                                newValue = newValue + "=" + pricePerPiece.ToString();
-                            }
-                            catch (Exception exception)
-                            {
-                                ignoreEvent = true;
-                                editStockGrid[e.ColumnIndex, e.RowIndex].Value = oldValue;
-                                ignoreEvent = false;
-                                MessageBox.Show("format ผิดพลาด ลองแค่ใส่ ราคา/จำนวน", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                InfoManager.LogMessage(GlobalEnums.Severity.Error, "Wrong format for original price field - have /");
-                                return;
-                            }
-                        }
-                        else
-                        {
-                            double doubleNumber;
-                            if (!Double.TryParse(newValue, out doubleNumber))
+                    newValue = editStockGrid[e.ColumnIndex, e.RowIndex].Value.ToString();
+                    switch (e.ColumnIndex)
+                    {
+                        case 0:
+                            oldValue = product.type;
+                            break;
+                        case 1:
+                            oldValue = product.name;
+                            break;
+                        case 2:
+                            oldValue = product.price.ToString();
+                            break;
+                        case 3:
+                            oldValue = product.pricePerPack.ToString();
+                            break;
+                        case 4:
+                            oldValue = product.quantityPerPack.ToString();
+                            break;
+                        case 5:
+                            oldValue = product.instock.ToString();
+                            int number;
+                            if (!Int32.TryParse(newValue, out number))
                             {
                                 editStockGrid[e.ColumnIndex, e.RowIndex].Value = oldValue;
                                 MessageBox.Show("format ผิดพลาด", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                InfoManager.LogMessage(GlobalEnums.Severity.Error, "Wrong format for original price field - no /");
                                 return;
                             }
-                        }
-            
-                        break;
-                }
+                            break;
+                        case 6:
+                            oldValue = product.minInstock.ToString();
+                            break;
+                        case 7:
+                            oldValue = product.originalPrice.ToString();
+                            if (newValue.Contains('/'))
+                            {
+                                try
+                                {
+                                    string[] temp = newValue.Split('/');
+                                    double pricePerPiece = Convert.ToDouble(temp[0]) / Convert.ToDouble(temp[1]);
+                                    newValue = newValue + "=" + pricePerPiece.ToString();
+                                }
+                                catch (Exception exception)
+                                {
+                                    ignoreEvent = true;
+                                    editStockGrid[e.ColumnIndex, e.RowIndex].Value = oldValue;
+                                    ignoreEvent = false;
+                                    MessageBox.Show("format ผิดพลาด ลองแค่ใส่ ราคา/จำนวน", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    InfoManager.LogMessage(GlobalEnums.Severity.Error, "Wrong format for original price field - have /");
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                double doubleNumber;
+                                if (!Double.TryParse(newValue, out doubleNumber))
+                                {
+                                    editStockGrid[e.ColumnIndex, e.RowIndex].Value = oldValue;
+                                    MessageBox.Show("format ผิดพลาด", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    InfoManager.LogMessage(GlobalEnums.Severity.Error, "Wrong format for original price field - no /");
+                                    return;
+                                }
+                            }
 
-                if (oldValue != null)
-                {
-                    tempHistories[columnName] = new ItemHistory(DateTime.Now, oldValue, newValue, columnName, GlobalEnums.HistoryStyle.Edit);
+                            break;
+                    }
+
+                    if (oldValue != null)
+                    {
+                        tempHistories[columnName] = new ItemHistory(DateTime.Now, oldValue, newValue, columnName, GlobalEnums.HistoryStyle.Edit);
+                    }
+                    else
+                    {
+                        InfoManager.LogMessage(GlobalEnums.Severity.Error, "oldValue is null when trying to set item history");
+                    }
                 }
-                else
+                catch(NullReferenceException)
                 {
-                    InfoManager.LogMessage(GlobalEnums.Severity.Error, "oldValue is null when trying to set item history");
+                    MessageBox.Show(MessageLibrary.FORMAT_ERROR.description, MessageLibrary.FORMAT_ERROR.title, MessageBoxButtons.OK, MessageLibrary.FORMAT_ERROR.severity); 
                 }
+           
 
             }
 

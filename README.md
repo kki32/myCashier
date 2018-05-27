@@ -3,6 +3,12 @@ v.5 (5/20/2018)
 - create damaged product
 - create code error
 
+v.6 (5/27/2018)
+- create export for printing stock check
+- remove cold water - not complete
+- create message system
+
+
 TODO:
 1 Change item to use id rather than name
 2 Only update the page if go to that tab to reduce update
@@ -13,5 +19,9 @@ TODO:
 7 Make log more useful
 8 Make stock in more useful
 9 Change UI for total to be more clear
-10 Remove cold water
+10 remove cold water - when calculate profit, when stock is less message
 11 Change stock In UI to be less noticable
+12 Min stock not working - maybe from experience might be better
+	13 Make print button for all stock
+14 Change message box to use object rather than 2 separate description,title
+15 Bug when don't input any price

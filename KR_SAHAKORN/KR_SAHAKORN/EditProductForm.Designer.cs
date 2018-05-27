@@ -25,20 +25,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.editStockGrid = new System.Windows.Forms.DataGridView();
-            this.editProductCategoryColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.saveEditStockButton = new System.Windows.Forms.Button();
             this.editProductHistoryRichTextBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.removeProductButton = new System.Windows.Forms.Button();
             this.damagedProduct = new System.Windows.Forms.Button();
+            this.editProductCategoryColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.column_8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.editStockGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
@@ -66,10 +66,10 @@
             this.Column20,
             this.Column22,
             this.Column30,
-            this.Column31,
-            this.Column23,
-            this.Column24,
-            this.Column21});
+            this.column_5,
+            this.column_6,
+            this.column_7,
+            this.column_8});
             this.editStockGrid.Cursor = System.Windows.Forms.Cursors.IBeam;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -86,63 +86,6 @@
             this.editStockGrid.Size = new System.Drawing.Size(877, 95);
             this.editStockGrid.TabIndex = 24;
             this.editStockGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.editStockGrid_CellValueChanged);
-            // 
-            // editProductCategoryColumn
-            // 
-            this.editProductCategoryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.editProductCategoryColumn.FillWeight = 30F;
-            this.editProductCategoryColumn.HeaderText = "ชนิด";
-            this.editProductCategoryColumn.Name = "editProductCategoryColumn";
-            this.editProductCategoryColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editProductCategoryColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column20
-            // 
-            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column20.HeaderText = "รายการสินค้า";
-            this.Column20.Name = "Column20";
-            // 
-            // Column22
-            // 
-            this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column22.FillWeight = 30F;
-            this.Column22.HeaderText = "ราคาต่อชิ้น";
-            this.Column22.Name = "Column22";
-            // 
-            // Column30
-            // 
-            this.Column30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column30.FillWeight = 30F;
-            this.Column30.HeaderText = "ราคาต่อแพ็ค";
-            this.Column30.Name = "Column30";
-            // 
-            // Column31
-            // 
-            this.Column31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column31.FillWeight = 30F;
-            this.Column31.HeaderText = "ในแพ็คมี";
-            this.Column31.Name = "Column31";
-            // 
-            // Column23
-            // 
-            this.Column23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column23.FillWeight = 30F;
-            this.Column23.HeaderText = "ใน stock";
-            this.Column23.Name = "Column23";
-            // 
-            // Column24
-            // 
-            this.Column24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column24.FillWeight = 30F;
-            this.Column24.HeaderText = "ควรมีใน stock";
-            this.Column24.Name = "Column24";
-            // 
-            // Column21
-            // 
-            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column21.FillWeight = 30F;
-            this.Column21.HeaderText = "ราคาต้นทุน (จำนวน/แพ็ค)";
-            this.Column21.Name = "Column21";
             // 
             // eventLog1
             // 
@@ -201,6 +144,63 @@
             this.damagedProduct.UseVisualStyleBackColor = true;
             this.damagedProduct.Click += new System.EventHandler(this.damagedProduct_Click);
             // 
+            // editProductCategoryColumn
+            // 
+            this.editProductCategoryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.editProductCategoryColumn.FillWeight = 30F;
+            this.editProductCategoryColumn.HeaderText = "ชนิด";
+            this.editProductCategoryColumn.Name = "editProductCategoryColumn";
+            this.editProductCategoryColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editProductCategoryColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.HeaderText = "รายการสินค้า";
+            this.Column20.Name = "Column20";
+            // 
+            // Column22
+            // 
+            this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column22.FillWeight = 30F;
+            this.Column22.HeaderText = "ราคาต่อชิ้น";
+            this.Column22.Name = "Column22";
+            // 
+            // Column30
+            // 
+            this.Column30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column30.FillWeight = 30F;
+            this.Column30.HeaderText = "ราคาต่อแพ็ค";
+            this.Column30.Name = "Column30";
+            // 
+            // column_5
+            // 
+            this.column_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.column_5.FillWeight = 30F;
+            this.column_5.HeaderText = "ในแพ็คมี";
+            this.column_5.Name = "column_5";
+            // 
+            // column_6
+            // 
+            this.column_6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.column_6.FillWeight = 30F;
+            this.column_6.HeaderText = "ใน stock";
+            this.column_6.Name = "column_6";
+            // 
+            // column_7
+            // 
+            this.column_7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.column_7.FillWeight = 30F;
+            this.column_7.HeaderText = "ควรมีใน stock";
+            this.column_7.Name = "column_7";
+            // 
+            // column_8
+            // 
+            this.column_8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.column_8.FillWeight = 30F;
+            this.column_8.HeaderText = "ราคาต้นทุน (จำนวน/แพ็ค)";
+            this.column_8.Name = "column_8";
+            // 
             // EditProductForm
             // 
             this.ClientSize = new System.Drawing.Size(929, 388);
@@ -223,15 +223,15 @@
         private System.Windows.Forms.RichTextBox editProductHistoryRichTextBox;
         private System.Windows.Forms.Button saveEditStockButton;
         private System.Windows.Forms.Button removeProductButton;
+        protected System.Windows.Forms.DataGridView editStockGrid;
+        private System.Windows.Forms.Button damagedProduct;
         private System.Windows.Forms.DataGridViewComboBoxColumn editProductCategoryColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        protected System.Windows.Forms.DataGridView editStockGrid;
-        private System.Windows.Forms.Button damagedProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_8;
     }
 }

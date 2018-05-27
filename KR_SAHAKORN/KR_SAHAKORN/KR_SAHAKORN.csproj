@@ -61,6 +61,8 @@
     <Compile Include="DamagedProductForm.Designer.cs">
       <DependentUpon>DamagedProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="StockInForm.cs">
       <SubType>Form</SubType>
     </Compile>

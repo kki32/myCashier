@@ -22,7 +22,7 @@ namespace KR_SAHAKORN
         {
 
             InitializeComponent();
-            this.Text = "KR SAHAKORN v.5 (5/20/2018)";
+            this.Text = "KR SAHAKORN v.6 (5/27/2018)";
 
             //LOGIC
             InfoManager.LoadType();
@@ -891,8 +891,18 @@ namespace KR_SAHAKORN
             thread.Start();
         }
 
-
-   
+        private void exportStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var file = FileHelper.WriteCsv();
+                MessageBox.Show(string.Format(MessageLibrary.EXPORT_SUCCESSFUL.description, file), MessageLibrary.EXPORT_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_SUCCESSFUL.severity);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 /* References 

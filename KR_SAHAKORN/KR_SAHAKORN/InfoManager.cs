@@ -246,9 +246,14 @@ namespace KR_SAHAKORN
                 // if name == โฟร์โมสต์
                 //////////////////////////////
                 //TODO
-
-                stock[b.item.name].instock -= b.quantity;
-                
+                if (b.item.name.Equals(GlobalEnums.COLD_WATER))
+                {
+                    stock["น้ำเปล่า เล็ก (28/2/61)"].instock -= b.quantity;
+                }
+                else
+                {
+                    stock[b.item.name].instock -= b.quantity;
+                }     
             }
             
             if (currentTransaction.isCash)
@@ -373,37 +378,37 @@ namespace KR_SAHAKORN
         public static void setItem(string name, string newValue, string field)
         {
             Item item = stock[name];
-
-            if (field.Equals("type") || field.Equals("ชนิด"))
+         
+            if (field.Equals("type") || field.Equals(GlobalEnums.COLUMN_1))
             {
                 item.type = newValue;
             }
-            else if (field.Equals("name") || field.Equals("รายการสินค้า"))
+            else if (field.Equals("name") || field.Equals(GlobalEnums.COLUMN_2))
             {
                 item.name = newValue;
                 stock.Remove(name);
             }
-            else if (field.Equals("price") || field.Equals("ราคาต่อชิ้น"))
+            else if (field.Equals("price") || field.Equals(GlobalEnums.COLUMN_3))
             {
                 item.price = Convert.ToDouble(newValue);
             }
-            else if (field.Equals("pricePerPack") || field.Equals("ราคาต่อแพ็ค"))
+            else if (field.Equals("pricePerPack") || field.Equals(GlobalEnums.COLUMN_4))
             {
                 item.pricePerPack = Convert.ToDouble(newValue);
             }
-            else if (field.Equals("quantityPerPack") || field.Equals("ในแพ็คมี"))
+            else if (field.Equals("quantityPerPack") || field.Equals(GlobalEnums.COLUMN_5))
             {
                 item.quantityPerPack = Convert.ToInt32(newValue);
             }
-            else if (field.Equals("instock") || field.Equals("ใน stock"))
+            else if (field.Equals("instock") || field.Equals(GlobalEnums.COLUMN_6))
             {
                 item.instock = Convert.ToInt32(newValue);
             }
-            else if (field.Equals("minInstock") || field.Equals("ควรมีใน stock"))
+            else if (field.Equals("minInstock") || field.Equals(GlobalEnums.COLUMN_7))
             {
                 item.minInstock = Convert.ToInt32(newValue);
             }
-            else if (field.Equals("originalPrice") || field.Equals("ราคาต้นทุน (จำนวน/แพ็ค)"))
+            else if (field.Equals("originalPrice") || field.Equals(GlobalEnums.COLUMN_8))
             {
                 item.originalPrice = newValue.ToString();
             }

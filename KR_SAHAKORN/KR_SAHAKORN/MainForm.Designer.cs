@@ -123,6 +123,7 @@
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventLog1 = new System.Diagnostics.EventLog();
+            this.exportStock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sellGrid)).BeginInit();
             this.tab.SuspendLayout();
             this.sellTab.SuspendLayout();
@@ -713,6 +714,7 @@
             // 
             // stockTab
             // 
+            this.stockTab.Controls.Add(this.exportStock);
             this.stockTab.Controls.Add(this.searchProductTextbox);
             this.stockTab.Controls.Add(this.findProductButton);
             this.stockTab.Controls.Add(this.totalLabelForStockTab);
@@ -1144,6 +1146,16 @@
             // 
             this.eventLog1.SynchronizingObject = this;
             // 
+            // exportStock
+            // 
+            this.exportStock.Location = new System.Drawing.Point(714, 25);
+            this.exportStock.Name = "exportStock";
+            this.exportStock.Size = new System.Drawing.Size(85, 32);
+            this.exportStock.TabIndex = 29;
+            this.exportStock.Text = "Export";
+            this.exportStock.UseVisualStyleBackColor = true;
+            this.exportStock.Click += new System.EventHandler(this.exportStock_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1279,6 +1291,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.Button exportStock;
     }
 }
 
