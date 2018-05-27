@@ -12,3 +12,6 @@ TODO:
 6 Create notif for when the product is about to expire
 7 Make log more useful
 8 Make stock in more useful
+9 Change UI for total to be more clear
+10 Remove cold water
+11 Change stock In UI to be less noticable
