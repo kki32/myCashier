@@ -47,6 +47,14 @@ namespace KR_SAHAKORN
             return buyerNames;
         }
 
+        //public static FixStockIn()
+        //{
+        //    foreach (Item i in stock.Values)
+        //    {
+        //        if(i.histories.)
+        //    }
+        //}
+
         public static string[] LoadType()
         {
             type = File.ReadAllLines("type.txt");
@@ -349,9 +357,12 @@ namespace KR_SAHAKORN
         }
         public static Dictionary<string, List<string>> GetStockIn(DateTime date)
         {
-            if (stockIn.ContainsKey(date))
+            foreach (DateTime d in stockIn.Keys)
             {
-                return stockIn[date];
+                if(d.Date == date.Date)
+                {
+                    return stockIn[d];
+                }
             }
             return null;
        

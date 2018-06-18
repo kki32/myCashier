@@ -14,10 +14,16 @@ namespace KR_SAHAKORN
     {
 
         public Item newItem;
+        public StockInForm stockInForm;
         public AddProductForm()
         {
             InitializeComponent();
             LoadNewProductCategory();
+        }
+
+        public void setStockInForm(StockInForm stockInForm)
+        {
+            this.stockInForm = stockInForm;
         }
 
         private void addNewProductButton_Click(object sender, EventArgs e)
@@ -134,6 +140,16 @@ namespace KR_SAHAKORN
                         Convert.ToInt32(newProductMin.Text), newProductCategoryDropDown.Text, newProductOriginalPrice.Text, Double.Parse(newProductPricePerPack.Text), Int32.Parse(newProductQuantityPerPack.Text));
                         newItem.AddItemHistory(new ItemHistory(DateTime.Now, "", "", "", GlobalEnums.HistoryStyle.Add));
                         InfoManager.AddNewProduct(newItem);
+
+                        if (InfoManager.stockInMode)
+                        {
+                            stockInForm.UpdateGrid(newItem.name, "ใน stock", "0", newProductInStock.Text);
+                            stockInForm.UpdateGrid(newItem.name, "ราคาต้นทุน (จำนวน/แพ็ค)", "0", newProductInStock.Text);
+                            stockInForm.UpdateGrid(newItem.name, "ราคาต่อชิ้น", "0", newProductInStock.Text);
+                            stockInForm.UpdateGrid(newItem.name, "ราคาต่อแพ็ค", "0", newProductInStock.Text);
+                            
+                        }
+
                         MessageBox.Show("เพิ่มสินค้าเสร็จเรียบร้อย", "Product is now added to the stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
                         //TODO fix this

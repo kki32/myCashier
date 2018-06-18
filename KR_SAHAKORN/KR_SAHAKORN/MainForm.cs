@@ -22,7 +22,7 @@ namespace KR_SAHAKORN
         {
 
             InitializeComponent();
-            this.Text = "KR SAHAKORN v.6 (5/27/2018)";
+            this.Text = "KR SAHAKORN v.6.1 (6/18/2018)";
 
             //LOGIC
             InfoManager.LoadType();
@@ -853,6 +853,7 @@ namespace KR_SAHAKORN
         private void addProductButton_Click(object sender, EventArgs e)
         {
             AddProductForm addProductForm = new AddProductForm();
+            addProductForm.setStockInForm(stockInForm);
             addProductForm.ShowDialog();
 
             if(addProductForm.newItem != null)
