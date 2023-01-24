@@ -22,7 +22,7 @@ namespace KR_SAHAKORN
         {
 
             InitializeComponent();
-            this.Text = "KR SAHAKORN v.6.1 (6/18/2018)";
+            this.Text = "KR SAHAKORN v.2023.1.23 (1/23/2023)";
 
             //LOGIC
             InfoManager.LoadType();
@@ -44,7 +44,7 @@ namespace KR_SAHAKORN
         private void LoadSellPage()
         {
             LoadBuyerNameComboBox(buyerNameComboBox, false);
-            ResetTransactionView();
+            ResetTransactionView(true);
         }
 
         private void LoadSignbookPage()
@@ -114,7 +114,7 @@ namespace KR_SAHAKORN
 
                     if (trans.date.Date <= to.Date && trans.date.Date >= from.Date)
                     {
-                        cashBookGrid.Rows.Add(trans.id, trans.date, b.buyer, b.item.name, b.quantity, b.item.price, b.item.pricePerPack, b.totalCost,
+                        cashBookGrid.Rows.Add(trans.id, trans.date, b.buyer, b.item.name, b.quantity, b.item.price, b.item.totalPrice, b.totalCost,
          trans.finalTotalCost, trans.given, trans.leftOver);
                     }
                 }
@@ -192,24 +192,14 @@ namespace KR_SAHAKORN
             {
                 var existingQuantity = sellGrid.Rows[existedRow].Cells[InfoManager.QUANTITY_COL];
                 addedQuantity = Convert.ToInt32(existingQuantity.Value) + Convert.ToInt32(addedQuantity);
-                if (addedQuantity > InfoManager.getItem(itemTobeBoughtTextbox.Text).instock)
-                {
-                    error.Add("ไม่พอ stock ไม่ตรง ควรเช็คใหม่");
-                    error.Add("Not enough in stock");
-
-                }
                 existingQuantity.Value = addedQuantity;
+
+                var existingTotal = sellGrid.Rows[existedRow].Cells[InfoManager.TOTAL_COL];
+                existingTotal.Value = item.price * addedQuantity;
             }
             else
             {
-
-                if (item.instock < 1)
-                {
-                    error.Add("ไม่พอ stock ไม่ตรง ควรเช็คใหม่");
-                    error.Add("Not enough in stock");
-                }
-
-                sellGrid.Rows.Add(item.name, addedQuantity, item.price.ToString(), item.pricePerPack.ToString());
+                sellGrid.Rows.Add(item.name, addedQuantity, item.price.ToString(), item.price * addedQuantity);
             }
             return error;
         }
@@ -277,8 +267,8 @@ namespace KR_SAHAKORN
 
                             LoadCashbookGrid();
                             LoadAccountingGrid();
-                            ResetTransactionView();
-                            LoadGenericStockGrid(stockGrid, true);
+                            ResetTransactionView(false);
+                            LoadGenericStockGrid(stockGrid);
                         }
 
                     }
@@ -299,7 +289,7 @@ namespace KR_SAHAKORN
                 {
                     foreach (BoughtItem b in trans.bought)
                     {
-                        signBookGrid.Rows.Add(trans.id, b.buyer, trans.date, b.item.name, b.quantity, b.item.price, b.item.pricePerPack, b.totalCost);
+                        signBookGrid.Rows.Add(trans.id, b.buyer, trans.date, b.item.name, b.quantity, b.item.price, b.totalCost);
                     }
                     total += trans.finalTotalCost;
                 }
@@ -317,14 +307,11 @@ namespace KR_SAHAKORN
             // Buyer's name in combobox
             foreach (var line in InfoManager.LoadBuyerNames())
             {
-
                 string[] tokens = line.Split('\n');
                 if (!(tokens[0] == "ทุกคน" && !includeEveryone))
                     c.Items.Add(tokens[0]);
             }
         }
-
-
 
         private void LoadGenericStockAutoComplete(TextBox textBox)
         {
@@ -334,14 +321,15 @@ namespace KR_SAHAKORN
             textBox.AutoCompleteCustomSource = collection;
         }
 
-        private void ResetTransactionView()
+        private void ResetTransactionView(bool resetDate)
         {
             AllowQuantityEditable();
             buyerNameComboBox.SelectedItem = null;
             itemTobeBoughtTextbox.Clear();
             LoadGenericStockAutoComplete(itemTobeBoughtTextbox);
             amountNumericUpDown.Text = "1";
-            sellDatePicker.Text = DateTime.Today.ToString();
+            if (resetDate)
+                sellDatePicker.Text = DateTime.Today.ToString();
             sellGrid.Rows.Clear();
             sellGrid.Refresh();
         }
@@ -374,7 +362,7 @@ namespace KR_SAHAKORN
                 signBookGrid.Sort(signBookGrid.Columns[InfoManager.ID_COL], ListSortDirection.Ascending);
                 buyerTotal.Text = total.ToString();
 
-            }
+           }
             else
             {
                 buyerNameComboBoxInSignBook.Text = InfoManager.EVERYONE;
@@ -399,25 +387,18 @@ namespace KR_SAHAKORN
             accountingGroupbox.Visible = false;
         }
 
-        public void LoadGenericStockGrid(DataGridView grid, bool showOriginalPrice = false)
+
+
+        public void LoadGenericStockGrid(DataGridView grid)
         {
 
             grid.Rows.Clear();
 
-            if (showOriginalPrice)
+            foreach (Item item in InfoManager.getStockItems())
             {
-                foreach (Item item in InfoManager.getStockItems())
-                {
-                    grid.Rows.Add(item.type, item.name, item.price, item.pricePerPack, item.quantityPerPack, item.instock, item.minInstock, item.originalPrice);
-                }
+                grid.Rows.Add(item.type, item.name, item.price, item.instock, Item.GetOriginalCost(item), item.profit, item.location);
             }
-            else
-            {
-                foreach (Item item in InfoManager.getStockItems())
-                {
-                    grid.Rows.Add(item.type, item.name, item.price, item.instock, item.minInstock);
-                }
-            }
+
             grid.Sort(grid.Columns[1], ListSortDirection.Ascending);
 
         }
@@ -431,7 +412,7 @@ namespace KR_SAHAKORN
 
         private void LoadStockPage()
         {
-            LoadGenericStockGrid(stockGrid, true);
+            LoadGenericStockGrid(stockGrid);
             LoadGenericStockAutoComplete(searchProductTextbox);
 
             totalLabelForStockTab.Text = stockGrid.RowCount.ToString();
@@ -476,15 +457,12 @@ namespace KR_SAHAKORN
         #endregion
 
 
-
-
-
         private void AllowQuantityEditable()
         {
 
             foreach (DataGridViewColumn dc in sellGrid.Columns)
             {
-                if (dc.Index.Equals(2))
+                if (dc.Index.Equals(1) || dc.Index.Equals(2))
                 {
                     dc.ReadOnly = false;
                 }
@@ -493,11 +471,6 @@ namespace KR_SAHAKORN
                     dc.ReadOnly = true;
                 }
             }
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
 
         }
 
@@ -565,12 +538,12 @@ namespace KR_SAHAKORN
                 if (e.ColumnIndex == 2)
                 {
                     string item = sellGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    if (Convert.ToInt32(sellGrid.Rows[e.RowIndex].Cells[2].Value) > InfoManager.getItem(item).instock)
-                    {
-                        sellGrid.Rows[e.RowIndex].Cells[2].Value = 1;
-                        MessageBox.Show("ไม่พอ", "Not enough", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //if (Convert.ToInt32(sellGrid.Rows[e.RowIndex].Cells[2].Value) > InfoManager.getItem(item).instock)
+                    //{
+                    //    sellGrid.Rows[e.RowIndex].Cells[2].Value = 1;
+                    //    MessageBox.Show("ไม่พอ", "Not enough", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }
+                    //}
                 }
             }
         }
@@ -724,7 +697,7 @@ namespace KR_SAHAKORN
 
 
                 }
-                LoadGenericStockGrid(stockGrid, true);
+                LoadGenericStockGrid(stockGrid);
                 LoadAccountingGrid();
             }
             /*
@@ -776,7 +749,7 @@ namespace KR_SAHAKORN
                     }
                     foreach (DataGridViewRow row in RowsToDelete) signBookGrid.Rows.Remove(row);
                 }
-                LoadGenericStockGrid(stockGrid, true);
+                LoadGenericStockGrid(stockGrid);
                 LoadSignbookGrid();
             }
             /*
@@ -838,7 +811,7 @@ namespace KR_SAHAKORN
                     if (InfoManager.containsItem(productName))
                     {
                         var item = InfoManager.getItem(productName);
-                        stockGrid.Rows[e.RowIndex].SetValues(item.type, item.name, item.price, item.pricePerPack, item.quantityPerPack, item.instock, item.minInstock, item.originalPrice);
+                        stockGrid.Rows[e.RowIndex].SetValues(item.type, item.name, item.price, item.totalPrice, item.quantityPerPack, item.instock, item.minInstock, item.originalPrice, item.message);
                     } else{ 
                         stockGrid.Rows.RemoveAt(stockGrid.Rows[e.RowIndex].Index);
                         totalLabelForStockTab.Text = stockGrid.RowCount.ToString();
@@ -858,7 +831,7 @@ namespace KR_SAHAKORN
 
             if(addProductForm.newItem != null)
             {
-                stockGrid.Rows.Add(addProductForm.newItem.type, addProductForm.newItem.name, addProductForm.newItem.price, addProductForm.newItem.pricePerPack, addProductForm.newItem.quantityPerPack, addProductForm.newItem.instock, addProductForm.newItem.minInstock, addProductForm.newItem.originalPrice);
+                stockGrid.Rows.Add(addProductForm.newItem.type, addProductForm.newItem.name, addProductForm.newItem.price, addProductForm.newItem.totalPrice, addProductForm.newItem.quantityPerPack, addProductForm.newItem.instock, addProductForm.newItem.minInstock, addProductForm.newItem.originalPrice);
                 stockGrid.Rows[stockGrid.Rows.Count - 1].Selected = true;
                 stockGrid.FirstDisplayedScrollingRowIndex = stockGrid.SelectedRows[0].Index;
 
@@ -896,13 +869,49 @@ namespace KR_SAHAKORN
         {
             try
             {
-                var file = FileHelper.WriteCsv();
-                MessageBox.Show(string.Format(MessageLibrary.EXPORT_SUCCESSFUL.description, file), MessageLibrary.EXPORT_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_SUCCESSFUL.severity);
+                var file = FileHelper.ExportStockCsv();
+                MessageBox.Show(string.Format(MessageLibrary.EXPORT_STOCK_SUCCESSFUL.description, file), MessageLibrary.EXPORT_STOCK_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_STOCK_SUCCESSFUL.severity);
             }
             catch (Exception exception)
             {
                 MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void importStockBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var file = FileHelper.ImportStockCsv();
+                MessageBox.Show(string.Format(MessageLibrary.EXPORT_STOCK_SUCCESSFUL.description, file), MessageLibrary.EXPORT_STOCK_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_STOCK_SUCCESSFUL.severity);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void stockGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void exportSignBookButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var file = FileHelper.ExportSignBookCsv(buyerNameComboBoxInSignBook.Text, signbookDateTimePickerFrom.Value.Date, signbookDateTimePickerTo.Value.Date);
+                MessageBox.Show(string.Format(MessageLibrary.EXPORT_SIGN_BOOK_SUCCESSFUL.description, file), MessageLibrary.EXPORT_STOCK_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_STOCK_SUCCESSFUL.severity);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sellGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }

@@ -20,6 +20,7 @@ namespace KR_SAHAKORN
             this.Text = "ชำระสินค้า";
             totalCostLabel.Text = totalCost.ToString();
             this.totalCost = totalCost;
+            payBySignRadioButton.Checked = true;
         }
 
         private void confirmToPayButton_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace KR_SAHAKORN
                 }
 
                 InfoManager.currentTransaction.setIsCompleted(true);
-                payByCashRadioButton.Checked = true;
+                payByCashRadioButton.Checked = false;
                 payBySignRadioButton.Checked = false;
                 payTextBox.Clear();
                 this.Close();

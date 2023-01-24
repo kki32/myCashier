@@ -75,6 +75,8 @@
             this.confirmToPayButton.Text = "บันทึก";
             this.confirmToPayButton.UseVisualStyleBackColor = true;
             this.confirmToPayButton.Click += new System.EventHandler(this.confirmToPayButton_Click);
+
+            this.AcceptButton = this.confirmToPayButton;
             // 
             // givenLabel
             // 

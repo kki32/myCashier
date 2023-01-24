@@ -21,13 +21,13 @@ namespace KR_SAHAKORN
             this.quantity = quantity;
             var q = quantity;
 
-            while (item.quantityPerPack > 1 && q >= item.quantityPerPack)
-            {
-                q = q - item.quantityPerPack;
-                this.totalCost += item.pricePerPack;
-            }
+            //while (item.quantityPerPack > 1 && q >= item.quantityPerPack)
+            //{
+            //    q = q - item.quantityPerPack;
+            //    this.totalCost += item.price;
+            //}
 
-            this.totalCost += q * item.price;
+            this.totalCost += (q * item.price);
         }
     }
 }

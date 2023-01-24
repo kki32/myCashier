@@ -8,27 +8,62 @@ namespace KR_SAHAKORN
 {
     public class Item
     {
+        public string location;
+        public string type;
         public string name;
         public int instock;
         public double price;
-        public string originalPrice;
-        public string type;
-        public int minInstock;
-        public double pricePerPack;
+
+        public string message;
+
+        public double profit
+        {
+            get
+            {
+                return Math.Round(price - originalPrice, 2);
+            }
+        }
+
+        public static string GetOriginalCost(Item item)
+        {
+            return item.totalPrice + "/" + item.quantityPerPack + " = " + Math.Round(item.originalPrice, 2).ToString();
+        }
+
+        public double totalPrice;
         public int quantityPerPack;
+        public double originalPrice
+        {
+            get
+            {
+                return totalPrice / quantityPerPack;
+            }
+        }
+
+        public double salePrice
+        {
+            get
+            {
+                return originalPrice * 1.15;
+            }
+        }
+
+        public int minInstock;
+        //public double pricePerPack;
+        //public int quantityPerPack;
         public List<ItemHistory> histories = new List<ItemHistory>();
  
 
-        public Item(string name, double price, int instock, int minInstock, string type, string originalPrice = "", double pricePerPack = 0, int quantityPerPack = 0)
+        public Item(string location, string type, string name, double price, double totalPrice, int quantityPerPack, int instock, string message)
         {
-            this.name = name;
-            this.instock = instock;
-            this.price = price;
+            this.location = location;
             this.type = type;
-            this.minInstock = minInstock;
-            this.originalPrice = originalPrice;
-            this.pricePerPack = pricePerPack;
+            this.name = name;
+            this.price = price;
+            this.totalPrice = totalPrice;
             this.quantityPerPack = quantityPerPack;
+
+            this.instock = instock;
+            this.message = message;
         }
 
 

@@ -149,7 +149,7 @@
             // 
             this.editProductCategoryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.editProductCategoryColumn.FillWeight = 30F;
-            this.editProductCategoryColumn.HeaderText = "ชนิด";
+            this.editProductCategoryColumn.HeaderText = GlobalEnums.LOCATION;
             this.editProductCategoryColumn.Name = "editProductCategoryColumn";
             this.editProductCategoryColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.editProductCategoryColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -157,51 +157,51 @@
             // column_2
             // 
             this.column_2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.column_2.HeaderText = "รายการสินค้า";
+            this.column_2.HeaderText = GlobalEnums.NAME;
             this.column_2.Name = "column_2";
             // 
             // Column22
             // 
             this.Column22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column22.FillWeight = 30F;
-            this.Column22.HeaderText = "ราคาต่อชิ้น";
+            this.Column22.HeaderText = GlobalEnums.PRICE;
             this.Column22.Name = "Column22";
             // 
             // Column30
             // 
             this.Column30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column30.FillWeight = 30F;
-            this.Column30.HeaderText = "ราคาต่อแพ็ค";
+            this.Column30.HeaderText = GlobalEnums.INSTOCK;
             this.Column30.Name = "Column30";
             // 
             // column_5
             // 
             this.column_5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_5.FillWeight = 30F;
-            this.column_5.HeaderText = "ในแพ็คมี";
+            this.column_5.HeaderText = GlobalEnums.ORIGINAL_COST;
             this.column_5.Name = "column_5";
             // 
             // column_6
             // 
             this.column_6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.column_6.FillWeight = 30F;
-            this.column_6.HeaderText = "ใน stock";
+            this.column_6.HeaderText = GlobalEnums.PROFIT;
             this.column_6.Name = "column_6";
-            // 
-            // column_7
-            // 
-            this.column_7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.column_7.FillWeight = 30F;
-            this.column_7.HeaderText = "ควรมีใน stock";
-            this.column_7.Name = "column_7";
-            // 
-            // column_8
-            // 
-            this.column_8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.column_8.FillWeight = 30F;
-            this.column_8.HeaderText = "ราคาต้นทุน (จำนวน/แพ็ค)";
-            this.column_8.Name = "column_8";
-            // 
+            //// 
+            //// column_7
+            //// 
+            //this.column_7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            //this.column_7.FillWeight = 30F;
+            //this.column_7.HeaderText = "ควรมีใน stock";
+            //this.column_7.Name = "column_7";
+            //// 
+            //// column_8
+            //// 
+            //this.column_8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            //this.column_8.FillWeight = 30F;
+            //this.column_8.HeaderText = "ราคาต้นทุน (จำนวน/แพ็ค)";
+            //this.column_8.Name = "column_8";
+            //// 
             // warningText
             // 
             this.warningText.AutoSize = true;

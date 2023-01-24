@@ -9,6 +9,10 @@ namespace KR_SAHAKORN
 {
     public static class MessageLibrary
     {
+        public static string IMPORT_ERROR()
+        {
+            return "มีปัญหาระหว่าง import\n" + CODE_ERROR_MESSAGE();
+        }
 
         public static string EXPORT_ERROR()
         {
@@ -19,8 +23,13 @@ namespace KR_SAHAKORN
           "Format มีปัญหา",
           MessageBoxIcon.Error);
 
-        public static Message EXPORT_SUCCESSFUL = new Message("Successful export",
-            "Export file {0} เสร็จเรียบร้อยแล้ว",
+        public static Message EXPORT_STOCK_SUCCESSFUL = new Message("Successful stock export",
+            "Export stock {0} เสร็จเรียบร้อยแล้ว",
+            MessageBoxIcon.Information);
+
+
+        public static Message EXPORT_SIGN_BOOK_SUCCESSFUL = new Message("Successful sign book export",
+            "Export สมุดเซ็น {0} เสร็จเรียบร้อยแล้ว",
             MessageBoxIcon.Information);
 
         //TODO make more better logging

@@ -28,28 +28,27 @@ namespace KR_SAHAKORN
 
             //TEMP SOL
             warningText.Text = "";
-            if (product.name.Equals(GlobalEnums.COLD_WATER))
-            {
-                column_2.ReadOnly = true;
-                column_5.ReadOnly = true;
-                column_6.ReadOnly = true;
-                column_7.ReadOnly = true;
-                column_8.ReadOnly = true;
-                var water = InfoManager.getItem(GlobalEnums.WATER);
-                editStockGrid.Rows.Add(product.type, product.name, product.price, product.pricePerPack, water.quantityPerPack, water.instock, water.minInstock, water.originalPrice);
-                warningText.Text = string.Format("ไม่สามารถเปลี่ยน '{0}' ได้ กรุณาไปที่ '{5}' ถ้าอยากเปลี่ยนข้อมูลดังต่อไปนี้\n'{4}', '{1}', '{2}', '{3}' (ชั่วคราว)", GlobalEnums.COLUMN_2, GlobalEnums.COLUMN_5, GlobalEnums.COLUMN_6, GlobalEnums.COLUMN_7, GlobalEnums.COLUMN_8, GlobalEnums.WATER);
-            }
-            else
-            {
-                if (product.name.Equals(GlobalEnums.WATER))
-                {
-                    column_2.ReadOnly = true;
-                    warningText.Text = string.Format("ไม่สามารถเปลี่ยน '{0}' ได้ (ชั่วคราว)", GlobalEnums.COLUMN_2);
-                }
+            //if (product.name.Equals(GlobalEnums.COLD_WATER))
+            //{
+            //    column_2.ReadOnly = true;
+            //    column_5.ReadOnly = true;
+            //    column_6.ReadOnly = true;
+            //    column_7.ReadOnly = true;
+            //    column_8.ReadOnly = true;
+            //    var water = InfoManager.getItem(GlobalEnums.WATER);
+            //    editStockGrid.Rows.Add(product.type, product.name, product.price, product.pricePerPack, water.quantityPerPack, water.instock, water.minInstock, water.originalPrice);
+            //    warningText.Text = string.Format("ไม่สามารถเปลี่ยน '{0}' ได้ กรุณาไปที่ '{5}' ถ้าอยากเปลี่ยนข้อมูลดังต่อไปนี้\n'{4}', '{1}', '{2}', '{3}' (ชั่วคราว)", GlobalEnums.COLUMN_2, GlobalEnums.COLUMN_5, GlobalEnums.COLUMN_6, GlobalEnums.COLUMN_7, GlobalEnums.COLUMN_8, GlobalEnums.WATER);
+            //}
+            //else
+            //{
+                //if (product.name.Equals(GlobalEnums.WATER))
+                //{
+                //    column_2.ReadOnly = true;
+                //    warningText.Text = string.Format("ไม่สามารถเปลี่ยน '{0}' ได้ (ชั่วคราว)", GlobalEnums.COLUMN_2);
+                //}
 
-                editStockGrid.Rows.Add(product.type, product.name, product.price, product.pricePerPack, product.quantityPerPack, product.instock, product.minInstock, product.originalPrice);
-                
-            }
+                editStockGrid.Rows.Add(product.type, product.name, product.price, product.totalPrice, product.quantityPerPack, product.salePrice, product.originalPrice, product.instock);                
+            //}
          
 
 
@@ -139,7 +138,7 @@ namespace KR_SAHAKORN
                             oldValue = product.price.ToString();
                             break;
                         case 3:
-                            oldValue = product.pricePerPack.ToString();
+                            oldValue = product.salePrice.ToString();
                             break;
                         case 4:
                             oldValue = product.quantityPerPack.ToString();

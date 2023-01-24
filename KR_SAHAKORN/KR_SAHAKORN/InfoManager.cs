@@ -12,8 +12,11 @@ namespace KR_SAHAKORN
     public static class InfoManager
     {
         public const int NAME_COL = 0;
-        public const int PRICE_COL = 2;
         public const int QUANTITY_COL = 1;
+
+        public const int PRICE_COL = 2;
+        public const int TOTAL_COL = 3;
+
         public const int DATE_COL = 0;
         public const int ID_COL = 0;
         public const string DATE_FORMAT = "dd/MM/yyy";
@@ -47,14 +50,6 @@ namespace KR_SAHAKORN
             return buyerNames;
         }
 
-        //public static FixStockIn()
-        //{
-        //    foreach (Item i in stock.Values)
-        //    {
-        //        if(i.histories.)
-        //    }
-        //}
-
         public static string[] LoadType()
         {
             type = File.ReadAllLines("type.txt");
@@ -63,19 +58,15 @@ namespace KR_SAHAKORN
 
         public static void LoadStock()
         {
-            string json = "";
+            string json = string.Empty;
 
             using (StreamReader r = new StreamReader("stock.json"))
-            {
                 json = r.ReadToEnd();
-            }
 
             stock = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, Item>>(json);
 
-            if(stock == null)
-            {
+            if (stock == null)
                 stock = new Dictionary<string, Item>();
-            }
         }
 
         public static void SaveToAccounting(DateTime date, double got)
@@ -83,7 +74,8 @@ namespace KR_SAHAKORN
             if (accounting.ContainsKey(date))
             {
                 accounting[date].gotPerDay = got;
-            }else
+            }
+            else
             {
                 accounting.Add(date, new Accounting(date, 0, 0, got));
             }
@@ -204,15 +196,12 @@ namespace KR_SAHAKORN
             string json = "";
 
             using (StreamReader r = new StreamReader("cashRecord.json"))
-            {
                 json = r.ReadToEnd();
-            }
 
             cashbook = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, Transaction>>(json);
+            
             if(cashbook == null)
-            {
                 cashbook = new Dictionary<int,Transaction>();
-            }
         }
 
 
@@ -254,14 +243,8 @@ namespace KR_SAHAKORN
                 // if name == โฟร์โมสต์
                 //////////////////////////////
                 //TODO
-                if (b.item.name.Equals(GlobalEnums.COLD_WATER))
-                {
-                    stock[GlobalEnums.WATER].instock -= b.quantity;
-                }
-                else
-                {
-                    stock[b.item.name].instock -= b.quantity;
-                }     
+              
+                stock[b.item.name].instock -= b.quantity;
             }
             
             if (currentTransaction.isCash)
@@ -297,7 +280,6 @@ namespace KR_SAHAKORN
 
             currentTransactionId += 1;
             System.IO.File.WriteAllText("currentId.txt", currentTransactionId.ToString(), Encoding.Unicode);
-
         }
 
         public static List<Transaction> getCashBook()
@@ -389,39 +371,27 @@ namespace KR_SAHAKORN
         public static void setItem(string name, string newValue, string field)
         {
             Item item = stock[name];
-         
-            if (field.Equals("type") || field.Equals(GlobalEnums.COLUMN_1))
+
+            if (field.Equals("location") || field.Equals(GlobalEnums.LOCATION))
             {
                 item.type = newValue;
             }
-            else if (field.Equals("name") || field.Equals(GlobalEnums.COLUMN_2))
+            else if (field.Equals("type") || field.Equals(GlobalEnums.TYPE))
+            {
+                item.type = newValue;
+            }
+            else if (field.Equals("name") || field.Equals(GlobalEnums.NAME))
             {
                 item.name = newValue;
                 stock.Remove(name);
             }
-            else if (field.Equals("price") || field.Equals(GlobalEnums.COLUMN_3))
+            else if (field.Equals("price") || field.Equals(GlobalEnums.PRICE))
             {
                 item.price = Convert.ToDouble(newValue);
             }
-            else if (field.Equals("pricePerPack") || field.Equals(GlobalEnums.COLUMN_4))
-            {
-                item.pricePerPack = Convert.ToDouble(newValue);
-            }
-            else if (field.Equals("quantityPerPack") || field.Equals(GlobalEnums.COLUMN_5))
-            {
-                item.quantityPerPack = Convert.ToInt32(newValue);
-            }
-            else if (field.Equals("instock") || field.Equals(GlobalEnums.COLUMN_6))
+            else if (field.Equals("instock") || field.Equals(GlobalEnums.INSTOCK))
             {
                 item.instock = Convert.ToInt32(newValue);
-            }
-            else if (field.Equals("minInstock") || field.Equals(GlobalEnums.COLUMN_7))
-            {
-                item.minInstock = Convert.ToInt32(newValue);
-            }
-            else if (field.Equals("originalPrice") || field.Equals(GlobalEnums.COLUMN_8))
-            {
-                item.originalPrice = newValue.ToString();
             }
             else
             {
@@ -484,7 +454,10 @@ namespace KR_SAHAKORN
 
         public static List<Transaction> getSignTransaction(string buyer)
         {
+            if (!signbook.TryGetValue(buyer, out List<Transaction> signTransaction))
+                signbook[buyer] = new List<Transaction>();
             return signbook[buyer];
+
         }
 
         public static DateTime getMondayOfThisWeek()
@@ -519,7 +492,6 @@ namespace KR_SAHAKORN
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
 
             System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
-
         }
 
         public static void RemoveCashbookEntry(int referenceNo)
@@ -537,13 +509,10 @@ namespace KR_SAHAKORN
             json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
 
             System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
-
         }
 
         public static void RemoveSignbookEntry(string buyer, int referenceNo)
         {
-  
-
             List<Transaction> transToBeDeleted = new List<Transaction>();
             foreach(var trans in signbook[buyer])
             {
@@ -562,9 +531,7 @@ namespace KR_SAHAKORN
                     {
                         stock[bi.item.name].instock += bi.quantity;
                     }
-  
                 }
-             
 
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(signbook);
 
@@ -578,9 +545,6 @@ namespace KR_SAHAKORN
 
         }
 
-
-
-
         public static void AddNewBuyer(string name)
         {                      
             System.IO.File.AppendAllText("buyerName.txt", Environment.NewLine + name, Encoding.Unicode);
@@ -589,8 +553,6 @@ namespace KR_SAHAKORN
             InfoManager.LoadBuyerNames();
             InfoManager.LoadSignbook();
         }
-
-      
 
     }
 }
