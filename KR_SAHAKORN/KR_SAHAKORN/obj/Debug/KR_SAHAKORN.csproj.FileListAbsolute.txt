@@ -1,0 +1,259 @@
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csprojResolveAssemblyReference.cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Form1.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.Cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Form2.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csprojResolveAssemblyReference.cache
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.Cache
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csprojResolveAssemblyReference.cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.Cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\Alice\Dropbox (CSU Fullerton)\Personal Project\KR_SAHAKORN\011019\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csprojResolveAssemblyReference.cache
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.Cache
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csprojResolveAssemblyReference.cache
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+\\Dell\kr_sahakorn\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.Cache
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+C:\Users\kki32\Desktop\KR_SAHAKORN\KR_SAHAKORN-20180110T070711Z-001\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Precision\Downloads\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\KR\Downloads\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+E:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+F:\New folder\myCashier-master\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Memory.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Memory.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
