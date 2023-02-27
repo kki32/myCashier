@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/myCashier/v17
+/KR_SAHAKORN/.vs/KR_SAHAKORN/FileContentIndex
+/KR_SAHAKORN/KR_SAHAKORN/obj/Debug/KR_SAHAKORN.csproj.GenerateResource.cache
+/KR_SAHAKORN/KR_SAHAKORN/obj/Debug/KR_SAHAKORN.csproj.FileListAbsolute.txt
+/KR_SAHAKORN/KR_SAHAKORN/obj/Debug/KR_SAHAKORN.csproj.CoreCompileInputs.cache
+/KR_SAHAKORN/KR_SAHAKORN/obj/Debug/KR_SAHAKORN.csproj.AssemblyReference.cache
+/KR_SAHAKORN/KR_SAHAKORN/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/KR_SAHAKORN/.vs/KR_SAHAKORN/v17/.suo

@@ -43,7 +43,7 @@ namespace KR_SAHAKORN
             path = path + @"..\" + fileName;
             using (var w = new StreamWriter(path, false, Encoding.UTF8))
             {
-                var line = string.Format("{0},{1},{2},{3},{4},{5},{6}", "Trans ID", "ของ", "วันที่", "ชื่อสินค้า", "จำนวน", "ราคาต่อหน่วย", "รวมทั้งสิ้น");
+                var line = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}", "Trans ID", "ของ", "วันที่", "ชื่อสินค้า", "จำนวน", "ราคาต่อหน่วย", "รวมทั้งสิ้น", "กำไรต่อหน่วย", "กำไรทั้งสิ้น");
 
                 w.WriteLine(line);
                 w.Flush();
@@ -72,7 +72,7 @@ namespace KR_SAHAKORN
                 {
                     foreach (BoughtItem b in trans.bought)
                     {
-                        var line = string.Format("{0},{1},{2},{3},{4},{5},{6}", trans.id, b.buyer, trans.date, b.item.name, b.quantity, b.item.price, b.totalCost);
+                        var line = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}", trans.id, b.buyer, trans.date, b.item.name, b.quantity, b.item.price, b.totalCost, b.item.rawProfit, b.totalProfit);
                         w.WriteLine(line);
                         w.Flush();
                     }
@@ -82,23 +82,31 @@ namespace KR_SAHAKORN
 
         public static List<Item> ImportStockCsv()
         {
+	        var records = new List<Item>();
 
-            var records = new List<Item>();
-            using (var reader = new StreamReader("ราคาสหกรณ์.csv"))
-            {
-                using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+			OpenFileDialog dlg = new OpenFileDialog();
+	        dlg.ShowDialog();
+
+	        if (dlg.ShowDialog() == DialogResult.OK)
+	        {
+		        string fileName = dlg.FileName;
+
+                using (var reader = new StreamReader(fileName))
                 {
-                    records = csv.GetRecords<Item>().ToList();
+                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                    {
+                        records = csv.GetRecords<Item>().ToList();
+                    }
                 }
-            }
 
-            var stocks = InfoManager.getStockItems();
-            var products = stocks.Select(x => x.name);
-            foreach (var record in records)
-            {
-                if (!products.Contains(record.name))
-                    InfoManager.AddNewProduct(record);
-            }
+                var stocks = InfoManager.getStockItems();
+                var products = stocks.Select(x => x.name);
+                foreach (var record in records)
+                {
+                    if (!products.Contains(record.name))
+                        InfoManager.AddNewProduct(record);
+                }
+	        }
 
             return records;
         }

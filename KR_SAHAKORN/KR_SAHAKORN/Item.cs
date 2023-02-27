@@ -16,13 +16,9 @@ namespace KR_SAHAKORN
 
         public string message;
 
-        public double profit
-        {
-            get
-            {
-                return Math.Round(price - originalPrice, 2);
-            }
-        }
+        public double profit => Math.Round(rawProfit, 2);
+
+        public double rawProfit => price - originalPrice;
 
         public static string GetOriginalCost(Item item)
         {

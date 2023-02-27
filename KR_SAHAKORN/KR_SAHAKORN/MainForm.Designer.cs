@@ -147,7 +147,6 @@ namespace KR_SAHAKORN
             this.sellGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sellGrid.Size = new System.Drawing.Size(813, 269);
             this.sellGrid.TabIndex = 8;
-            this.sellGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sellGrid_CellContentClick);
             this.sellGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.sellGrid_CellValueChanged);
             // 
             // Column2
@@ -661,7 +660,6 @@ namespace KR_SAHAKORN
             this.stockGrid.Size = new System.Drawing.Size(815, 380);
             this.stockGrid.TabIndex = 23;
             this.stockGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockGrid_CellClick);
-            this.stockGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockGrid_CellContentClick);
             // 
             // Column20
             // 
