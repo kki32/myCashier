@@ -257,3 +257,40 @@ H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs
 H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
 H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
 H:\KR_SAHAKORN - Copy\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe.config
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\KR_SAHAKORN.pdb
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\CsvHelper.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Buffers.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Memory.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.AssemblyReference.cache
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.SuggestedBindingRedirects.cache
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.AddProductForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.DamagedProductForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.StockInForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.EditProductForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Authentication.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.FindProduct.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.MainForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.PayForm.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.Properties.Resources.resources
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.GenerateResource.cache
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CoreCompileInputs.cache
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.csproj.CopyComplete
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.exe
+C:\Users\kki32\Documents\myCashier\KR_SAHAKORN\KR_SAHAKORN\obj\Debug\KR_SAHAKORN.pdb
