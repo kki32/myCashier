@@ -800,7 +800,7 @@ namespace KR_SAHAKORN
 			}
 			catch (Exception exception)
 			{
-				MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(MessageLibrary.IMPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 

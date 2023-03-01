@@ -85,7 +85,6 @@ namespace KR_SAHAKORN
 	        var records = new List<Item>();
 
 			OpenFileDialog dlg = new OpenFileDialog();
-	        dlg.ShowDialog();
 
 	        if (dlg.ShowDialog() == DialogResult.OK)
 	        {
