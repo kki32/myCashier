@@ -8,6 +8,8 @@ using Newtonsoft.Json.Linq;           // MUST download JSON using NUGet package
 using System.Windows.Forms;
 using CsvHelper;
 using System.Globalization;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace KR_SAHAKORN
 {
@@ -80,34 +82,42 @@ namespace KR_SAHAKORN
             }
         }
 
-        public static List<Item> ImportStockCsv()
+        public static List<Item> ImportStockCsv(bool isStockIn)
         {
 	        var records = new List<Item>();
 
 			OpenFileDialog dlg = new OpenFileDialog();
 
-	        if (dlg.ShowDialog() == DialogResult.OK)
+			if (dlg.ShowDialog() != DialogResult.OK) return records;
+
+			string fileName = dlg.FileName;
+
+	        using (var reader = new StreamReader(fileName))
 	        {
-		        string fileName = dlg.FileName;
-
-                using (var reader = new StreamReader(fileName))
-                {
-                    using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-                    {
-                        records = csv.GetRecords<Item>().ToList();
-                    }
-                }
-
-                var stocks = InfoManager.getStockItems();
-                var products = stocks.Select(x => x.name);
-                foreach (var record in records)
-                {
-                    if (!products.Contains(record.name))
-                        InfoManager.AddNewProduct(record);
-                }
+		        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+			        records = csv.GetRecords<Item>().ToList();
+	        }
+                
+	        foreach (var record in records)
+	        {
+		        var item = InfoManager.getItem(record.name);
+		        if (item == null)
+		        {
+			        InfoManager.AddNewProduct(record);
+		        }
+		        else if (isStockIn)
+		        {
+			        item.location = record.location;
+			        item.type = record.type;
+			        item.price = record.price;
+			        item.totalPrice = record.totalPrice;
+			        item.quantityPerPack = record.quantityPerPack;
+			        item.instock += record.instock;
+			        item.message = record.message;
+		        }
 	        }
 
-            return records;
+	        return records;
         }
  
         

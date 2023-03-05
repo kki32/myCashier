@@ -43,12 +43,5 @@ namespace KR_SAHAKORN
             leftOver = given - finalTotalCost;
         }
 
-        public void setGiven(double given)
-        {
-            this.given = given;
-            updateLeftOver();
-        }
-
-
     }
 }

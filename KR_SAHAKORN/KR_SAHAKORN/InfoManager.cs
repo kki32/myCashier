@@ -403,7 +403,8 @@ namespace KR_SAHAKORN
 
         public static Item getItem(string name)
         {
-            return stock[name];
+	        stock.TryGetValue(name, out var item);
+	        return item;
         }
 
         public static bool containsItem(string name, bool checkInStock = false)
@@ -502,14 +503,15 @@ namespace KR_SAHAKORN
                 }
             }
 
-            if(transToBeDeleted.Count > 0)
+            if (transToBeDeleted.Count > 0)
             {
                 foreach(var trans in transToBeDeleted)
                 {
                     signbook[buyer].Remove(trans);
                     foreach(var bi in trans.bought)
                     {
-                        //stock[bi.item.name].instock += bi.quantity;
+                        if (stock.TryGetValue(bi.item.name, out Item item))
+                            item.instock += bi.quantity;
                     }
                 }
 
@@ -520,9 +522,7 @@ namespace KR_SAHAKORN
                 json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
 
                 System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
-
             }
-
         }
 
         public static void AddNewBuyer(string name)

@@ -9,14 +9,9 @@ namespace KR_SAHAKORN
 {
     public static class MessageLibrary
     {
-        public static string IMPORT_ERROR()
+        public static string ACTION_ERROR(string context)
         {
-            return "มีปัญหาระหว่าง import\n" + CODE_ERROR_MESSAGE();
-        }
-
-        public static string EXPORT_ERROR()
-        {
-            return "มีปัญหาระหว่าง export\n" + CODE_ERROR_MESSAGE();
+            return $"มีปัญหาระหว่าง {context}\n" + CODE_ERROR_MESSAGE();
         }
 
         public static Message FORMAT_ERROR = new Message("Format error",

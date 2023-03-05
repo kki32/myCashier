@@ -232,6 +232,7 @@ namespace KR_SAHAKORN
 			else
 			{
 				InfoManager.currentTransaction = new Transaction();
+				var totalBought = 0;
 				foreach (DataGridViewRow Datarow in sellGrid.Rows)
 				{
 					var cost = 0.0;
@@ -241,35 +242,25 @@ namespace KR_SAHAKORN
 					InfoManager.currentTransaction.AddItem(new BoughtItem(InfoManager.getItem(Datarow.Cells[InfoManager.NAME_COL].Value.ToString()),
 					  quantity,
 					  buyerNameComboBox.Text));
+					totalBought += quantity;
 				}
 
 
 				if (sellGrid.Rows.Count > 0)
 				{
-
-					var payForm = new PayForm(InfoManager.currentTransaction.finalTotalCost);
+					var payForm = new PayForm(InfoManager.currentTransaction.finalTotalCost, totalBought);
 					{
 						payForm.ShowDialog();
 
 						if (InfoManager.currentTransaction.isCompleted)
 						{
-							if (sellDatePicker.Value.Date == DateTime.Today.Date)
-							{
-								InfoManager.currentTransaction.date = DateTime.Now;
-
-							}
-							else
-							{
-								InfoManager.currentTransaction.date = sellDatePicker.Value.Date;
-
-							}
+							InfoManager.currentTransaction.date = sellDatePicker.Value.Date;
 							InfoManager.SaveCurrentTransactionToCashbook();
 
 							LoadAccountingGrid();
 							ResetTransactionView(false);
 							LoadGenericStockGrid(stockGrid);
 						}
-
 					}
 				}
 				else
@@ -495,7 +486,6 @@ namespace KR_SAHAKORN
 			if (!existed)
 			{
 				InfoManager.AddNewBuyer(newBuyerTextInput.Text);
-
 
 				LoadBuyerNameComboBox(buyerNameComboBox, false);
 				LoadBuyerNameComboBox(buyerNameComboBoxInSignBook);
@@ -770,11 +760,11 @@ namespace KR_SAHAKORN
 			}
 		}
 
-		private void stockInButton_Click(object sender, EventArgs e)
-		{
-			Thread thread = new Thread(new ThreadStart(OpenStockInForm));
-			thread.Start();
-		}
+		//private void stockInButton_Click(object sender, EventArgs e)
+		//{
+		//	Thread thread = new Thread(new ThreadStart(OpenStockInForm));
+		//	thread.Start();
+		//}
 
 		private void exportStock_Click(object sender, EventArgs e)
 		{
@@ -785,7 +775,7 @@ namespace KR_SAHAKORN
 			}
 			catch (Exception exception)
 			{
-				MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(MessageLibrary.ACTION_ERROR("Export Stock"), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -793,14 +783,14 @@ namespace KR_SAHAKORN
 		{
 			try
 			{
-				var file = FileHelper.ImportStockCsv();
+				var file = FileHelper.ImportStockCsv(false);
 				itemTobeBoughtTextbox.Clear();
 				LoadGenericStockAutoComplete(itemTobeBoughtTextbox);
 				MessageBox.Show(string.Format(MessageLibrary.EXPORT_STOCK_SUCCESSFUL.description, file), MessageLibrary.EXPORT_STOCK_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_STOCK_SUCCESSFUL.severity);
 			}
 			catch (Exception exception)
 			{
-				MessageBox.Show(MessageLibrary.IMPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(MessageLibrary.ACTION_ERROR("Import"), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -813,7 +803,22 @@ namespace KR_SAHAKORN
 			}
 			catch (Exception exception)
 			{
-				MessageBox.Show(MessageLibrary.EXPORT_ERROR(), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(MessageLibrary.ACTION_ERROR("Export Signbook"), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void stockInButton_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				var file = FileHelper.ImportStockCsv(true);
+				itemTobeBoughtTextbox.Clear();
+				LoadGenericStockAutoComplete(itemTobeBoughtTextbox);
+				MessageBox.Show(string.Format(MessageLibrary.EXPORT_STOCK_SUCCESSFUL.description, file), MessageLibrary.EXPORT_STOCK_SUCCESSFUL.title, MessageBoxButtons.OK, MessageLibrary.EXPORT_STOCK_SUCCESSFUL.severity);
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(MessageLibrary.ACTION_ERROR("Stock In"), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

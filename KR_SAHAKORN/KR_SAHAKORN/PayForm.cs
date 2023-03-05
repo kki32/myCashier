@@ -12,14 +12,13 @@ namespace KR_SAHAKORN
 {
     public partial class PayForm : Form
     {
-        private double totalCost = 0.0;
-
-        public PayForm(double totalCost)
+	    public PayForm(double totalCost, int totalBought)
         {
             InitializeComponent();
             this.Text = "ชำระสินค้า";
-            totalCostLabel.Text = totalCost.ToString();
-            this.totalCost = totalCost;
+            totalBoughtLabel.Text = totalBought.ToString();
+
+			totalCostLabel.Text = totalCost.ToString();
         }
 
         private void confirmToPayButton_Click(object sender, EventArgs e)
