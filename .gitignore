@@ -10,3 +10,5 @@
 /KR_SAHAKORN/KR_SAHAKORN/obj/Debug/KR_SAHAKORN.csproj.AssemblyReference.cache
 /KR_SAHAKORN/KR_SAHAKORN/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /KR_SAHAKORN/.vs/KR_SAHAKORN/v17/.suo
+*.testlog
+/KR_SAHAKORN/.vs/KR_SAHAKORN/v17/TestStore/0/testlog.manifest

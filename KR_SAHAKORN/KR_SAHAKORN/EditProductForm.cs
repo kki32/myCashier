@@ -222,39 +222,6 @@ namespace KR_SAHAKORN
             }
         }
 
-
-        private void damagedProduct_Click(object sender, EventArgs e)
-        {
-            var valid = false;
-            if(tempHistories.Count > 0)
-            {
-                DialogResult dialogResult = MessageBox.Show("ข้อมูลที่ใส่มาจะถูกลบถ้าคุณไม่เซฟ คุณแน่ใจนะ", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                if (dialogResult.Equals(DialogResult.OK))
-                {
-                    valid = true;
-                }
-            }
-            else
-            {
-                valid = true;
-            }
-
-            if (valid)
-            {
-                tempHistories.Clear();
-                DamagedProductForm damagedProductForm = new DamagedProductForm(product);
-                {
-                    var result = damagedProductForm.ShowDialog();
-                    if (result == DialogResult.Cancel)
-                    {
-                        RefreshEditProductGrid();
-                    }
-                }
-            }
-     
-            
-        }
     }
 
 }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;           // MUST download JSON using NUGet package
+using Newtonsoft.Json;
+
+// MUST download JSON using NUGet package
 
 
 namespace KR_SAHAKORN
@@ -32,7 +33,6 @@ namespace KR_SAHAKORN
         private static Dictionary<string, Item> stock = new Dictionary<string, Item>();
         private static string[] buyerNames;
         private static string[] type;
-        //public static Dictionary<int, Transaction> cashbook = new Dictionary<int, Transaction>();
         public static Dictionary<string, List<Transaction>> signbook = new Dictionary<string, List<Transaction>>();
         public static Transaction currentTransaction;
         public static int currentTransactionId;
@@ -63,7 +63,7 @@ namespace KR_SAHAKORN
             using (StreamReader r = new StreamReader("stock.json"))
                 json = r.ReadToEnd();
 
-            stock = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, Item>>(json);
+            stock = JsonConvert.DeserializeObject<Dictionary<string, Item>>(json);
 
             if (stock == null)
                 stock = new Dictionary<string, Item>();
@@ -80,8 +80,8 @@ namespace KR_SAHAKORN
                 accounting.Add(date, new Accounting(date, 0, 0, got));
             }
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(accounting);
-            System.IO.File.WriteAllText("accounting.json", json, Encoding.Unicode);
+            string json = JsonConvert.SerializeObject(accounting);
+            File.WriteAllText("accounting.json", json, Encoding.Unicode);
         }
 
         public static void SaveReceivedToAccounting(DateTime date, double received)
@@ -94,8 +94,8 @@ namespace KR_SAHAKORN
                 accounting.Add(date, new Accounting(date, 0, received, 0));
             }
 
-    string json = Newtonsoft.Json.JsonConvert.SerializeObject(accounting);
-            System.IO.File.WriteAllText("accounting.json", json, Encoding.Unicode);
+    string json = JsonConvert.SerializeObject(accounting);
+            File.WriteAllText("accounting.json", json, Encoding.Unicode);
         }
 
         public static void SavePaidToAccounting(DateTime date, double paid)
@@ -110,16 +110,16 @@ namespace KR_SAHAKORN
             }
         ;
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(accounting);
-            System.IO.File.WriteAllText("accounting.json", json, Encoding.Unicode);
+            string json = JsonConvert.SerializeObject(accounting);
+            File.WriteAllText("accounting.json", json, Encoding.Unicode);
         }
 
         public static void SaveToSignBook(string newBuyer)
         {
             signbook.Add(newBuyer, new List<Transaction>());
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(signbook);
-            System.IO.File.WriteAllText("signRecord.json", json, Encoding.Unicode);
+            string json = JsonConvert.SerializeObject(signbook);
+            File.WriteAllText("signRecord.json", json, Encoding.Unicode);
         }
 
         public static void LoadSignbook()
@@ -131,7 +131,7 @@ namespace KR_SAHAKORN
                 json = r.ReadToEnd();
             }
 
-            signbook = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<Transaction>>>(json);
+            signbook = JsonConvert.DeserializeObject<Dictionary<string, List<Transaction>>>(json);
 
 
             if (signbook == null) {
@@ -184,49 +184,24 @@ namespace KR_SAHAKORN
                 json = r.ReadToEnd();
             }
 
-            accounting = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<DateTime, Accounting>>(json);
+            accounting = JsonConvert.DeserializeObject<Dictionary<DateTime, Accounting>>(json);
             if (accounting == null)
             {
                 accounting = new Dictionary<DateTime, Accounting>();
             }
         }
 
-        //public static void LoadCashbook()
-        //{
-        //    string json = "";
-
-        //    using (StreamReader r = new StreamReader("cashRecord.json"))
-        //        json = r.ReadToEnd();
-
-        //    cashbook = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, Transaction>>(json);
-            
-        //    if(cashbook == null)
-        //        cashbook = new Dictionary<int,Transaction>();
-        //}
-
-
-
         public static void LogMessage(GlobalEnums.Severity severity, string message, string stackTrace = "")
         {
             var logMessage = "Severity :" + severity +
-                   "Date :" + DateTime.Now.ToString() +
+                   "Date :" + DateTime.Now +
             "Message :" + message + Environment.NewLine;
             if(stackTrace != "")
             {
                 logMessage += "StackTrace :" + stackTrace;
             }
-                
-             
-                    System.IO.File.WriteAllText("log.txt", logMessage, Encoding.Unicode);
-        }
 
-        public static void AddDamagedProduct(string name, int quantity)
-        {
-            var item = getItem(name);
-            item.instock -= quantity;
-
-            var json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+	        File.WriteAllText("log.txt", logMessage, Encoding.Unicode);
         }
 
         public static void SaveCurrentTransactionToCashbook()
@@ -250,22 +225,17 @@ namespace KR_SAHAKORN
       
             signbook[currentTransaction.bought[0].buyer].Add(currentTransaction);
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(signbook);
+            string json = JsonConvert.SerializeObject(signbook);
 
-            System.IO.File.WriteAllText("signRecord.json", json, Encoding.Unicode);
+            File.WriteAllText("signRecord.json", json, Encoding.Unicode);
        
 
-            json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+            json = JsonConvert.SerializeObject(stock);
+            File.WriteAllText("stock.json", json, Encoding.Unicode);
 
             currentTransactionId += 1;
-            System.IO.File.WriteAllText("currentId.txt", currentTransactionId.ToString(), Encoding.Unicode);
+            File.WriteAllText("currentId.txt", currentTransactionId.ToString(), Encoding.Unicode);
         }
-
-        //public static List<Transaction> getCashBook()
-        //{
-        //    return cashbook.Values.ToList();
-        //}
 
         public static string[] getType()
         {
@@ -281,7 +251,7 @@ namespace KR_SAHAKORN
                 json = r.ReadToEnd();
             }
 
-            stockIn = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<DateTime, Dictionary<string, List<string>>>>(json);
+            stockIn = JsonConvert.DeserializeObject<Dictionary<DateTime, Dictionary<string, List<string>>>>(json);
             if (stockIn == null)
             {
                 stockIn = new Dictionary<DateTime, Dictionary<string, List<string>>> ();
@@ -290,7 +260,7 @@ namespace KR_SAHAKORN
         public static void AddStockIn(DateTime date, string item, string field, string before, string after)
         {
             if (!stockIn.ContainsKey(date)) stockIn[date] = new Dictionary<string, List<string>>();
-            if (!stockIn[date].ContainsKey(item)) stockIn[date][item] = new List<string>() { "", "false", "false", "false"};
+            if (!stockIn[date].ContainsKey(item)) stockIn[date][item] = new List<string> { "", "false", "false", "false"};
 
 
             if (field.Equals("ใน stock"))
@@ -314,8 +284,8 @@ namespace KR_SAHAKORN
                 stockIn[date][item][3] = "true";
             }
 
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(stockIn);
-            System.IO.File.WriteAllText("stockIn.json", json, Encoding.Unicode);
+	        string json = JsonConvert.SerializeObject(stockIn);
+            File.WriteAllText("stockIn.json", json, Encoding.Unicode);
         }
         public static Dictionary<string, List<string>> GetStockIn(DateTime date)
         {
@@ -335,7 +305,6 @@ namespace KR_SAHAKORN
             return stockIn[date][item];
         }
 
-
         public static void AddItemHistory(string name, ItemHistory itemh)
         {
             Item item = stock[name];
@@ -343,9 +312,9 @@ namespace KR_SAHAKORN
 
             stock[name] = item;
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+            string json = JsonConvert.SerializeObject(stock);
 
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+            File.WriteAllText("stock.json", json, Encoding.Unicode);
         }
 
         public static void setItem(string name, string newValue, string field)
@@ -375,30 +344,15 @@ namespace KR_SAHAKORN
             }
             else
             {
-                InfoManager.LogMessage(GlobalEnums.Severity.Warning, "Field does not match");
+                LogMessage(GlobalEnums.Severity.Warning, "Field does not match");
             }
     
 
             stock[item.name] = item;
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+            string json = JsonConvert.SerializeObject(stock);
 
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
-        }
-
-        public static void setItemType(string name, string newValue)
-        {
-        }
-
-        public static void setItemName(string oldValue, string newValue){
-            Item item = stock[oldValue];
-            item.name = newValue;
-            stock.Add(newValue, item);
-            stock.Remove(oldValue);
-
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
-
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+            File.WriteAllText("stock.json", json, Encoding.Unicode);
         }
 
         public static Item getItem(string name)
@@ -425,12 +379,12 @@ namespace KR_SAHAKORN
 
         public static string[] getStockKeys()
         {
-            return stock.Keys.ToArray<string>();
+            return stock.Keys.ToArray();
         }
 
         public static Item[] getStockItems()
         {
-            return stock.Values.ToArray<Item>();
+            return stock.Values.ToArray();
         }
 
         public static List<Transaction> getSignTransaction(string buyer)
@@ -462,26 +416,26 @@ namespace KR_SAHAKORN
         {
             stock[item.name] = item;
 
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+            string json = JsonConvert.SerializeObject(stock);
 
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+            File.WriteAllText("stock.json", json, Encoding.Unicode);
         }
 
         public static void RemoveProduct(string name)
         {
             stock.Remove(name);
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+            string json = JsonConvert.SerializeObject(stock);
 
-            System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+            File.WriteAllText("stock.json", json, Encoding.Unicode);
         }
 
-        //public static void RemoveCashbookEntry(int referenceNo)
+        //public static void RemoveCashbookEntry(int transactionId)
         //{
-        //    foreach(BoughtItem bi in cashbook[referenceNo].bought)
+        //    foreach(BoughtItem bi in cashbook[transactionId].bought)
         //    {
         //        stock[bi.item.name].instock += bi.quantity;
         //    }
-        //    cashbook.Remove(referenceNo);
+        //    cashbook.Remove(transactionId);
            
         //    string json = Newtonsoft.Json.JsonConvert.SerializeObject(cashbook);
 
@@ -492,12 +446,12 @@ namespace KR_SAHAKORN
         //    System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
         //}
 
-        public static void RemoveSignbookEntry(string buyer, int referenceNo)
+        public static void RemoveSignbookEntry(string buyer, int transactionId)
         {
             List<Transaction> transToBeDeleted = new List<Transaction>();
             foreach(var trans in signbook[buyer])
             {
-                if(trans.id.Equals(referenceNo))
+                if(trans.id.Equals(transactionId))
                 {
                     transToBeDeleted.Add(trans);
                 }
@@ -515,23 +469,23 @@ namespace KR_SAHAKORN
                     }
                 }
 
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(signbook);
+                string json = JsonConvert.SerializeObject(signbook);
 
-                System.IO.File.WriteAllText("signRecord.json", json, Encoding.Unicode);
+                File.WriteAllText("signRecord.json", json, Encoding.Unicode);
 
-                json = Newtonsoft.Json.JsonConvert.SerializeObject(stock);
+                json = JsonConvert.SerializeObject(stock);
 
-                System.IO.File.WriteAllText("stock.json", json, Encoding.Unicode);
+                File.WriteAllText("stock.json", json, Encoding.Unicode);
             }
         }
 
         public static void AddNewBuyer(string name)
         {                      
-            System.IO.File.AppendAllText("buyerName.txt", Environment.NewLine + name, Encoding.Unicode);
+            File.AppendAllText("buyerName.txt", Environment.NewLine + name, Encoding.Unicode);
 
-            InfoManager.SaveToSignBook(name);
-            InfoManager.LoadBuyerNames();
-            InfoManager.LoadSignbook();
+            SaveToSignBook(name);
+            LoadBuyerNames();
+            LoadSignbook();
         }
 
     }

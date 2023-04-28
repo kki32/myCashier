@@ -41,7 +41,7 @@ namespace KR_SAHAKORN
         public static string ExportSignBookCsv(string buyerName, DateTime from, DateTime to)
         {
             var path = System.AppDomain.CurrentDomain.BaseDirectory;
-            var fileName = "KR_SAHAKORN_SIGN_BOOK_" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss") + ".csv";
+            var fileName = "KR_SAHAKORN_SIGN_BOOK_" + from.ToString("dd-MM-yyyy") + "_" + to.ToString("dd-MM-yyyy") + "_" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss") + ".csv";
             path = path + @"..\" + fileName;
             using (var w = new StreamWriter(path, false, Encoding.UTF8))
             {

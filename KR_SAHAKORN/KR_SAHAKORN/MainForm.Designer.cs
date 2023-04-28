@@ -48,8 +48,9 @@ namespace KR_SAHAKORN
 			this.amountNumericUpDown = new System.Windows.Forms.NumericUpDown();
 			this.itemTobeBoughtTextbox = new System.Windows.Forms.TextBox();
 			this.SignTab = new System.Windows.Forms.TabPage();
+			this.signbookSaveButton = new System.Windows.Forms.Button();
 			this.exportSignBookButton = new System.Windows.Forms.Button();
-			this.signbookChangeOrDeleteButton = new System.Windows.Forms.Button();
+			this.signbookDeleteButton = new System.Windows.Forms.Button();
 			this.label13 = new System.Windows.Forms.Label();
 			this.signbookDateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
 			this.label4 = new System.Windows.Forms.Label();
@@ -335,8 +336,9 @@ namespace KR_SAHAKORN
 			// 
 			// SignTab
 			// 
+			this.SignTab.Controls.Add(this.signbookSaveButton);
 			this.SignTab.Controls.Add(this.exportSignBookButton);
-			this.SignTab.Controls.Add(this.signbookChangeOrDeleteButton);
+			this.SignTab.Controls.Add(this.signbookDeleteButton);
 			this.SignTab.Controls.Add(this.label13);
 			this.SignTab.Controls.Add(this.signbookDateTimePickerFrom);
 			this.SignTab.Controls.Add(this.label4);
@@ -353,6 +355,16 @@ namespace KR_SAHAKORN
 			this.SignTab.Text = "สมุดเซ็น";
 			this.SignTab.UseVisualStyleBackColor = true;
 			// 
+			// signbookSaveButton
+			// 
+			this.signbookSaveButton.Location = new System.Drawing.Point(661, 523);
+			this.signbookSaveButton.Name = "signbookSaveButton";
+			this.signbookSaveButton.Size = new System.Drawing.Size(75, 29);
+			this.signbookSaveButton.TabIndex = 10;
+			this.signbookSaveButton.Text = "Save";
+			this.signbookSaveButton.UseVisualStyleBackColor = true;
+			this.signbookSaveButton.Click += new System.EventHandler(this.signbookSaveButton_Click);
+			// 
 			// exportSignBookButton
 			// 
 			this.exportSignBookButton.Location = new System.Drawing.Point(314, 24);
@@ -365,15 +377,15 @@ namespace KR_SAHAKORN
 			this.exportSignBookButton.UseVisualStyleBackColor = true;
 			this.exportSignBookButton.Click += new System.EventHandler(this.exportSignBookButton_Click);
 			// 
-			// signbookChangeOrDeleteButton
+			// signbookDeleteButton
 			// 
-			this.signbookChangeOrDeleteButton.Location = new System.Drawing.Point(749, 523);
-			this.signbookChangeOrDeleteButton.Name = "signbookChangeOrDeleteButton";
-			this.signbookChangeOrDeleteButton.Size = new System.Drawing.Size(75, 29);
-			this.signbookChangeOrDeleteButton.TabIndex = 8;
-			this.signbookChangeOrDeleteButton.Text = "แก้ไข/ลบ";
-			this.signbookChangeOrDeleteButton.UseVisualStyleBackColor = true;
-			this.signbookChangeOrDeleteButton.Click += new System.EventHandler(this.signbookChangeOrDeleteButton_Click);
+			this.signbookDeleteButton.Location = new System.Drawing.Point(749, 523);
+			this.signbookDeleteButton.Name = "signbookDeleteButton";
+			this.signbookDeleteButton.Size = new System.Drawing.Size(75, 29);
+			this.signbookDeleteButton.TabIndex = 8;
+			this.signbookDeleteButton.Text = "ลบ";
+			this.signbookDeleteButton.UseVisualStyleBackColor = true;
+			this.signbookDeleteButton.Click += new System.EventHandler(this.signbookDeleteButton_Click);
 			// 
 			// label13
 			// 
@@ -1085,7 +1097,7 @@ namespace KR_SAHAKORN
         private System.Windows.Forms.DateTimePicker sellDatePicker;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker signbookDateTimePickerFrom;
-        private System.Windows.Forms.Button signbookChangeOrDeleteButton;
+        private System.Windows.Forms.Button signbookDeleteButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
@@ -1125,6 +1137,7 @@ namespace KR_SAHAKORN
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalCostColumn;
 		private Button stockInButton;
+		private Button signbookSaveButton;
 	}
 }
 

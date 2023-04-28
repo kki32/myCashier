@@ -18,7 +18,7 @@ namespace KR_SAHAKORN
 		private object tempValue;
 		private bool ignoreEvent = false;
 		private StockInForm stockInForm = null;
-		public MainForm()
+		public MainForm() 
 		{
 
 			InitializeComponent();
@@ -653,7 +653,7 @@ namespace KR_SAHAKORN
 
 		}
 
-		private void signbookChangeOrDeleteButton_Click(object sender, EventArgs e)
+		private void signbookDeleteButton_Click(object sender, EventArgs e)
 		{
 			DialogResult dialogResult = MessageBox.Show("คุณแน่ใจนะ?", "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -663,23 +663,21 @@ namespace KR_SAHAKORN
 				{
 					InfoManager.RemoveSignbookEntry(selected.Cells[1].Value.ToString(), Convert.ToInt32(selected.Cells[0].Value));
 
-					List<DataGridViewRow> RowsToDelete = new List<DataGridViewRow>();
+					List<DataGridViewRow> rowsToDelete = new List<DataGridViewRow>();
 					foreach (DataGridViewRow row in signBookGrid.Rows)
 					{
 						if (selected.Cells[0].Value.Equals(row.Cells[0].Value))
 						{
-							RowsToDelete.Add(row);
+							rowsToDelete.Add(row);
 						}
 
 					}
-					foreach (DataGridViewRow row in RowsToDelete) signBookGrid.Rows.Remove(row);
+					foreach (DataGridViewRow row in rowsToDelete) signBookGrid.Rows.Remove(row);
 				}
 				LoadGenericStockGrid(stockGrid);
 				LoadSignbookGrid();
 			}
 		}
-
-
 
 		private void signbookToDateTimePicker_ValueChanged(object sender, EventArgs e)
 		{
@@ -819,6 +817,76 @@ namespace KR_SAHAKORN
 			catch (Exception exception)
 			{
 				MessageBox.Show(MessageLibrary.ACTION_ERROR("Stock In"), MessageLibrary.CODE_ERROR_TITLE(GlobalEnums.CodeError.CE3), MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void signbookSaveButton_Click(object sender, EventArgs e)
+		{
+			var text = new StringBuilder("คุณแน่ใจนะ?").AppendLine();
+			text.AppendLine("Before");
+			
+			foreach (DataGridViewColumn column in signBookGrid.Columns)
+				text.AppendLine(column.HeaderText);
+
+			var selectedTransactionIds = new HashSet<int>();
+			foreach (DataGridViewRow selectedRow in signBookGrid.SelectedRows)
+			{
+				selectedTransactionIds.Add(Convert.ToInt32(selectedRow.Cells[0].Value));
+			}
+
+			foreach (int transactionId in selectedTransactionIds)
+			{
+				foreach (DataGridViewRow row in signBookGrid.Rows)
+				{
+					if (transactionId.Equals(row.Cells[0].Value))
+					{
+						for (int i = 0; i < signBookGrid.ColumnCount; i++)
+							text.Append(row.Cells[i].Value).Append(" ");
+					}
+				}
+
+				var transaction = InfoManager.signbook.Values.SelectMany(x => x).Where(x => x.id == transactionId);
+
+				text.Append("After");
+				text.AppendLine();
+				foreach (var item in transaction)
+				{
+					text.Append(item.date);
+					text.Append(item.date);
+					text.AppendLine();
+					foreach (var b in item.bought)
+					{
+						text.Append(b.item.name);
+						text.Append(b.item.price);
+						text.Append(b.quantity);
+						text.AppendLine();
+					}
+					text.Append(item.finalTotalCost);
+				}
+			}
+
+			DialogResult dialogResult = MessageBox.Show(text.ToString(), "Are you sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+
+			if (dialogResult.Equals(DialogResult.OK))
+			{
+				//foreach (DataGridViewRow selected in signBookGrid.SelectedRows)
+				//{
+				//	InfoManager.RemoveSignbookEntry(selected.Cells[1].Value.ToString(), Convert.ToInt32(selected.Cells[0].Value));
+
+				//	List<DataGridViewRow> rowsToDelete = new List<DataGridViewRow>();
+				//	foreach (DataGridViewRow row in signBookGrid.Rows)
+				//	{
+				//		if (selected.Cells[0].Value.Equals(row.Cells[0].Value))
+				//		{
+				//			rowsToDelete.Add(row);
+				//		}
+
+				//	}
+				//	foreach (DataGridViewRow row in rowsToDelete) signBookGrid.Rows.Remove(row);
+				//}
+				//LoadGenericStockGrid(stockGrid);
+				//LoadSignbookGrid();
 			}
 		}
 	}

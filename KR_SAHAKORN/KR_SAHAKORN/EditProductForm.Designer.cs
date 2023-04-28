@@ -134,17 +134,6 @@
             this.removeProductButton.UseVisualStyleBackColor = true;
             this.removeProductButton.Click += new System.EventHandler(this.removeProductButton_Click);
             // 
-            // damagedProduct
-            // 
-            this.damagedProduct.Font = new System.Drawing.Font("CordiaUPC", 14.25F);
-            this.damagedProduct.Location = new System.Drawing.Point(613, 331);
-            this.damagedProduct.Name = "damagedProduct";
-            this.damagedProduct.Size = new System.Drawing.Size(85, 32);
-            this.damagedProduct.TabIndex = 29;
-            this.damagedProduct.Text = "สินค้าเสีย";
-            this.damagedProduct.UseVisualStyleBackColor = true;
-            this.damagedProduct.Click += new System.EventHandler(this.damagedProduct_Click);
-            // 
             // editProductCategoryColumn
             // 
             this.editProductCategoryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
